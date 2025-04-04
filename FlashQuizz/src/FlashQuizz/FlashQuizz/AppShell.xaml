@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="FlashQuizz.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:FlashQuizz"
+    Shell.FlyoutBehavior="Flyout"
+    Title="FlashQuizz">
+
+    <ShellContent
+     Title="Home"
+     ContentTemplate="{DataTemplate local:MainPage}"
+     Route="MainPage" />
+
+    <FlyoutItem Title="Accueil" >
+        <ShellContent ContentTemplate="{DataTemplate local:MesCartes}" />
+    </FlyoutItem>
+
+
+    <TabBar>
+        <Tab Title="home" Icon="nvincible_logo_home.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
+        </Tab>
+        <Tab Title="home" Icon="nvincible_logo_home.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MesCartes}"/>
+        </Tab>
+    </TabBar>
+
+</Shell>

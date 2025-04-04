@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FlashQuizz</name>
+    </assembly>
+    <members>
+        <member name="T:FlashQuizz.ViewModels.Mvvm1ViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:FlashQuizz.ViewModels.Mvvm1ViewModel.Counter">
+            <inheritdoc cref="F:FlashQuizz.ViewModels.Mvvm1ViewModel.counter"/>
+        </member>
+        <member name="F:FlashQuizz.ViewModels.Mvvm1ViewModel.incrementCommand">
+            <summary>The backing field for <see cref="P:FlashQuizz.ViewModels.Mvvm1ViewModel.IncrementCommand"/>.</summary>
+        </member>
+        <member name="P:FlashQuizz.ViewModels.Mvvm1ViewModel.IncrementCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:FlashQuizz.ViewModels.Mvvm1ViewModel.Increment(System.Int32)"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Counter">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Counter" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Counter">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Counter" generated properties.</summary>
+        </member>
+    </members>
+</doc>
