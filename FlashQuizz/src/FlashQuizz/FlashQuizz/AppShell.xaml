@@ -14,7 +14,8 @@
 
     <FlyoutItem Title="Accueil" >
         <ShellContent ContentTemplate="{DataTemplate local:MesCartes}" />
-    </FlyoutItem>
+    </FlyoutItem>
+
 
 
     <TabBar>

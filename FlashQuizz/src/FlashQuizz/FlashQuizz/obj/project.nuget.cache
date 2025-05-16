@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6HCKkX4skDE=",
+  "dgSpecHash": "HDdFRdhnWfE=",
   "success": true,
-  "projectFilePath": "D:\\YOSEF\\MODULES\\2A_SEM2\\335-App_mobile\\FlashQuizz\\src\\FlashQuizz\\FlashQuizz\\FlashQuizz.csproj",
+  "projectFilePath": "C:\\Users\\pn25kdv\\Documents\\GitHub\\FlashQuizz_Mobile\\FlashQuizz\\src\\FlashQuizz\\FlashQuizz\\FlashQuizz.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pn25kdv\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.0\\communitytoolkit.mvvm.8.4.0.nupkg.sha512",
     "C:\\Users\\pn25kdv\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",

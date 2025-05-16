@@ -15,7 +15,7 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FlashQuizz
-build_property.ProjectDir = D:\YOSEF\MODULES\2A_SEM2\335-App_mobile\FlashQuizz\src\FlashQuizz\FlashQuizz\
+build_property.ProjectDir = C:\Users\pn25kdv\Documents\GitHub\FlashQuizz_Mobile\FlashQuizz\src\FlashQuizz\FlashQuizz\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTAotExportsEnabled = 
@@ -27,38 +27,56 @@ build_property.CsWinRTUseWindowsUIXamlProjections = false
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[D:/YOSEF/MODULES/2A_SEM2/335-App_mobile/FlashQuizz/src/FlashQuizz/FlashQuizz/App.xaml]
+[C:/Users/pn25kdv/Documents/GitHub/FlashQuizz_Mobile/FlashQuizz/src/FlashQuizz/FlashQuizz/Add_Edit_Card.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FlashQuizz.Add_Edit_Card.xaml
+build_metadata.AdditionalFiles.TargetPath = Add_Edit_Card.xaml
+build_metadata.AdditionalFiles.RelativePath = Add_Edit_Card.xaml
+
+[C:/Users/pn25kdv/Documents/GitHub/FlashQuizz_Mobile/FlashQuizz/src/FlashQuizz/FlashQuizz/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlashQuizz.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[D:/YOSEF/MODULES/2A_SEM2/335-App_mobile/FlashQuizz/src/FlashQuizz/FlashQuizz/AppShell.xaml]
+[C:/Users/pn25kdv/Documents/GitHub/FlashQuizz_Mobile/FlashQuizz/src/FlashQuizz/FlashQuizz/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlashQuizz.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[D:/YOSEF/MODULES/2A_SEM2/335-App_mobile/FlashQuizz/src/FlashQuizz/FlashQuizz/MainPage.xaml]
+[C:/Users/pn25kdv/Documents/GitHub/FlashQuizz_Mobile/FlashQuizz/src/FlashQuizz/FlashQuizz/Learning_Mode.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FlashQuizz.Learning_Mode.xaml
+build_metadata.AdditionalFiles.TargetPath = Learning_Mode.xaml
+build_metadata.AdditionalFiles.RelativePath = Learning_Mode.xaml
+
+[C:/Users/pn25kdv/Documents/GitHub/FlashQuizz_Mobile/FlashQuizz/src/FlashQuizz/FlashQuizz/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlashQuizz.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[D:/YOSEF/MODULES/2A_SEM2/335-App_mobile/FlashQuizz/src/FlashQuizz/FlashQuizz/MesCartes.xaml]
+[C:/Users/pn25kdv/Documents/GitHub/FlashQuizz_Mobile/FlashQuizz/src/FlashQuizz/FlashQuizz/MesCartes.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlashQuizz.MesCartes.xaml
 build_metadata.AdditionalFiles.TargetPath = MesCartes.xaml
 build_metadata.AdditionalFiles.RelativePath = MesCartes.xaml
 
-[D:/YOSEF/MODULES/2A_SEM2/335-App_mobile/FlashQuizz/src/FlashQuizz/FlashQuizz/Resources/Styles/Colors.xaml]
+[C:/Users/pn25kdv/Documents/GitHub/FlashQuizz_Mobile/FlashQuizz/src/FlashQuizz/FlashQuizz/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlashQuizz.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[D:/YOSEF/MODULES/2A_SEM2/335-App_mobile/FlashQuizz/src/FlashQuizz/FlashQuizz/Resources/Styles/Styles.xaml]
+[C:/Users/pn25kdv/Documents/GitHub/FlashQuizz_Mobile/FlashQuizz/src/FlashQuizz/FlashQuizz/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlashQuizz.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/pn25kdv/Documents/GitHub/FlashQuizz_Mobile/FlashQuizz/src/FlashQuizz/FlashQuizz/Session_Summary.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FlashQuizz.Session_Summary.xaml
+build_metadata.AdditionalFiles.TargetPath = Session_Summary.xaml
+build_metadata.AdditionalFiles.RelativePath = Session_Summary.xaml

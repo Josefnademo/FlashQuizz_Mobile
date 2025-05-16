@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlashQuizz.Session_Summary"
+             Title="Session_Summary">
+    <ContentPage Title="Résumé">
+        <StackLayout Padding="20">
+            <Label Text="Session terminée!" FontSize="Title" HorizontalOptions="Center"/>
+
+            <Label Text="{Binding TimeSpent}" FontSize="Medium"/>
+            <Label Text="{Binding HardestCard}" FontSize="Medium"/>
+            <Label Text="{Binding PerfectCardsCount}" FontSize="Medium"/>
+            <Label Text="{Binding MemorizationPercentage}" FontSize="Medium"/>
+
+            <Button Text="Retour au menu" Command="{Binding ReturnToMenuCommand}"/>
+        </StackLayout>
+    </ContentPage>

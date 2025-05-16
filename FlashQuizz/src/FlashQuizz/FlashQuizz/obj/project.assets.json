@@ -33726,11 +33726,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\YOSEF\\MODULES\\2A_SEM2\\335-App_mobile\\FlashQuizz\\src\\FlashQuizz\\FlashQuizz\\FlashQuizz.csproj",
+      "projectUniqueName": "C:\\Users\\pn25kdv\\Documents\\GitHub\\FlashQuizz_Mobile\\FlashQuizz\\src\\FlashQuizz\\FlashQuizz\\FlashQuizz.csproj",
       "projectName": "FlashQuizz",
-      "projectPath": "D:\\YOSEF\\MODULES\\2A_SEM2\\335-App_mobile\\FlashQuizz\\src\\FlashQuizz\\FlashQuizz\\FlashQuizz.csproj",
+      "projectPath": "C:\\Users\\pn25kdv\\Documents\\GitHub\\FlashQuizz_Mobile\\FlashQuizz\\src\\FlashQuizz\\FlashQuizz\\FlashQuizz.csproj",
       "packagesPath": "C:\\Users\\pn25kdv\\.nuget\\packages\\",
-      "outputPath": "D:\\YOSEF\\MODULES\\2A_SEM2\\335-App_mobile\\FlashQuizz\\src\\FlashQuizz\\FlashQuizz\\obj\\",
+      "outputPath": "C:\\Users\\pn25kdv\\Documents\\GitHub\\FlashQuizz_Mobile\\FlashQuizz\\src\\FlashQuizz\\FlashQuizz\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
