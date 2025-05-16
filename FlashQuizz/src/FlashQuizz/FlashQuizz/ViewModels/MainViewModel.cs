@@ -1,88 +1,115 @@
-using System.Collections.ObjectModel;
-using System.ComponentModel;
+﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
+using FlashQuizz.Models;
+using FlashQuizz.Views;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using System.Threading.Tasks;
+using Microsoft.Maui.Controls;
+using System.Runtime.CompilerServices;
 
-namespace FlashQuizz.ViewModels;
-
-
-    public class MainViewModel : INotifyPropertyChanged
+namespace FlashQuizz.ViewModels
+{
+    public partial class MainViewModel : ObservableObject
     {
-        // Card management
-        public ObservableCollection<FlashCard> Cards { get; } = new();
-        public FlashCard CurrentCard { get; set; }
-        public bool IsEditing { get; set; }
+        [ObservableProperty]
+        ObservableCollection<FlashCard> cards;
 
-        // Learning mode
-        public bool IsQuestionShowing { get; set; } = true;
-        public bool IsAnswerShowing { get; set; }
-        public string ProgressText { get; set; }
+        [ObservableProperty]
+        bool isRefreshing;
 
-        // Commands
         public ICommand AddCardCommand { get; }
-        public ICommand EditCardCommand { get; }
-        public ICommand SaveCardCommand { get; }
-        public ICommand CancelCommand { get; }
         public ICommand StartLearningCommand { get; }
-        public ICommand ShowAnswerCommand { get; }
-        public ICommand KnowCardCommand { get; }
-        public ICommand DontKnowCardCommand { get; }
-        public ICommand ReturnToMenuCommand { get; }
+        public ICommand RefreshCardsCommand { get; }
+        public ICommand EditCardCommand { get; }
 
         public MainViewModel()
         {
-            // Initialize commands
-            AddCardCommand = new Command(OnAddCard);
-            EditCardCommand = new Command<FlashCard>(OnEditCard);
-            SaveCardCommand = new Command(OnSaveCard);
-            CancelCommand = new Command(OnCancel);
-            StartLearningCommand = new Command(OnStartLearning);
-            ShowAnswerCommand = new Command(() =>
+            Cards = new ObservableCollection<FlashCard>();
+
+            // Commands
+            AddCardCommand = new AsyncRelayCommand(OnAddCard);
+            StartLearningCommand = new AsyncRelayCommand(OnStartLearning, CanStartLearning);
+            RefreshCardsCommand = new AsyncRelayCommand(OnRefreshCards);
+            EditCardCommand = new AsyncRelayCommand<FlashCard>(OnEditCard);
+
+            LoadDummyData(); // or loading from the database
+        }
+
+        void LoadDummyData()
+        {
+            Cards.Add(new FlashCard { Question = "Quelle est la capitale de la France ?", Answer = "Paris" });
+            Cards.Add(new FlashCard { Question = "Combien font 2 + 2 ?", Answer = "4" });
+        }
+
+        bool CanStartLearning()
+        {
+            return Cards != null && Cards.Count > 0;
+        }
+
+        [ObservableProperty]
+        bool hasCards;
+
+        async Task OnAddCard()
+        {
+            await Shell.Current.GoToAsync(nameof(AddEditCardPage));
+        }
+
+        async Task OnEditCard(FlashCard selectedCard)
+        {
+            var parameters = new Dictionary<string, object>
             {
-                IsQuestionShowing = false;
-                IsAnswerShowing = true;
-            });
-            KnowCardCommand = new Command(OnKnowCard);
-            DontKnowCardCommand = new Command(OnDontKnowCard);
-            ReturnToMenuCommand = new Command(OnReturnToMenu);
+                { "CardToEdit", selectedCard }
+            };
+
+            await Shell.Current.GoToAsync(nameof(AddEditCardPage), true, parameters);
         }
 
-        private void OnAddCard()
+        async Task OnStartLearning()
         {
-            CurrentCard = new FlashCard();
-            IsEditing = false;
-            // Navigation to Add/Edit page
-        }
-
-        private void OnEditCard(FlashCard card)
-        {
-            CurrentCard = card;
-            IsEditing = true;
-            // Navigation to Add/Edit page
-        }
-
-        private void OnSaveCard()
-        {
-            if (!IsEditing)
+            var parameters = new Dictionary<string, object>
             {
-                Cards.Add(CurrentCard);
+                { "Cards", Cards.ToList() }
+            };
+
+            await Shell.Current.GoToAsync(nameof(LearningPage), true, parameters);
+        }
+
+        async Task OnRefreshCards()
+        {
+            IsRefreshing = true;
+
+            //  download current data from the DB
+            await Task.Delay(1000);
+
+            IsRefreshing = false;
+        }
+
+        // Method to remove a card
+        public void DeleteCard(FlashCard card)
+        {
+            if (Cards.Contains(card))
+                Cards.Remove(card);
+
+            HasCards = Cards.Count > 0;
+        }
+
+        // Method for adding or updating a map
+        public void AddOrUpdateCard(FlashCard card, bool isEdit = false)
+        {
+            if (isEdit)
+            {
+                var existing = Cards.FirstOrDefault(c => c.Id == card.Id);
+                if (existing != null)
+                {
+                    existing.Question = card.Question;
+                    existing.Answer = card.Answer;
+                    return;
+                }
             }
-            // Navigation back
-        }
 
-        private void OnStartLearning()
-        {
-            if (Cards.Any())
-            {
-                ShuffleCards();
-                CurrentCard = Cards.First();
-                // Navigation to Learning page
-            }
+            Cards.Add(card);
+            HasCards = true;
         }
-
-        private void ShuffleCards()
-        {
-            var rng = new Random();
-            Cards = new ObservableCollection<FlashCard>(Cards.OrderBy(x => rng.Next()));
-        }
-
     }
+}
