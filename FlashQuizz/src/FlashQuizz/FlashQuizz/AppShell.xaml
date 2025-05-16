@@ -7,24 +7,6 @@
     Shell.FlyoutBehavior="Flyout"
     Title="FlashQuizz">
 
-    <ShellContent
-     Title="Home"
-     ContentTemplate="{DataTemplate local:MainPage}"
-     Route="MainPage" />
-
-    <FlyoutItem Title="Accueil" >
-        <ShellContent ContentTemplate="{DataTemplate local:MesCartes}" />
-    </FlyoutItem>
-
-
-
-    <TabBar>
-        <Tab Title="home" Icon="nvincible_logo_home.png">
-            <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
-        </Tab>
-        <Tab Title="home" Icon="nvincible_logo_home.png">
-            <ShellContent ContentTemplate="{DataTemplate local:MesCartes}"/>
-        </Tab>
-    </TabBar>
+    <ShellContent Title="My Cards" ContentTemplate="{DataTemplate Views:MyCardsPage}" />
 
 </Shell>

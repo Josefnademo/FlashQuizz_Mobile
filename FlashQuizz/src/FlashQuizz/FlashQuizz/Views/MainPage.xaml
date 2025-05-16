@@ -4,7 +4,7 @@
              x:Class="FlashQuizz.MainPage">
 
     <ContentPage.BindingContext>
-        <viewmodel:MainMenuViewModel />
+        <ViewModels:MainViewModel/>
     </ContentPage.BindingContext>
 
     <Grid RowDefinitions="*,Auto,Auto,Auto" Padding="20">
