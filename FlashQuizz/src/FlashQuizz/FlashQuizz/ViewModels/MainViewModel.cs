@@ -4,8 +4,7 @@ using System.Windows.Input;
 
 namespace FlashQuizz.ViewModels;
 
-public class MainViewModel : ContentPage
-{
+
     public class MainViewModel : INotifyPropertyChanged
     {
         // Card management
@@ -87,4 +86,3 @@ public class MainViewModel : ContentPage
         }
 
     }
-}
