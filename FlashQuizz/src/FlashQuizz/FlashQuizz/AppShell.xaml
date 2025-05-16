@@ -3,6 +3,8 @@
     x:Class="FlashQuizz.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Views="clr-namespace:FlashQuizz.Views"
+    xmlns:ViewModels="clr-namespace:FlashQuizz.ViewModels"
     xmlns:local="clr-namespace:FlashQuizz"
     Shell.FlyoutBehavior="Flyout"
     Title="FlashQuizz">

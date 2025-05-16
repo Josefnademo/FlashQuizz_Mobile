@@ -22,7 +22,7 @@ namespace FlashQuizz.ViewModels
         public ICommand StartLearningCommand { get; }
         public ICommand RefreshCardsCommand { get; }
         public ICommand EditCardCommand { get; }
-
+/*
         public MainViewModel()
         {
             Cards = new ObservableCollection<FlashCard>();
@@ -34,7 +34,7 @@ namespace FlashQuizz.ViewModels
             EditCardCommand = new AsyncRelayCommand<FlashCard>(OnEditCard);
 
             LoadDummyData(); // or loading from the database
-        }
+        }*/
 
         void LoadDummyData()
         {
@@ -50,11 +50,11 @@ namespace FlashQuizz.ViewModels
         [ObservableProperty]
         bool hasCards;
 
-        async Task OnAddCard()
+       /* async Task OnAddCard()
         {
             await Shell.Current.GoToAsync(nameof(AddEditCardPage));
         }
-
+        
         async Task OnEditCard(FlashCard selectedCard)
         {
             var parameters = new Dictionary<string, object>
@@ -73,7 +73,7 @@ namespace FlashQuizz.ViewModels
             };
 
             await Shell.Current.GoToAsync(nameof(LearningPage), true, parameters);
-        }
+        }*/
 
         async Task OnRefreshCards()
         {

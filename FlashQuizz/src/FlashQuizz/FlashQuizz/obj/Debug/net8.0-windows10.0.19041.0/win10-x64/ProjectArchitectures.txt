@@ -1,1 +1,1 @@
-D:\YOSEF\MODULES\2A_SEM2\335-App_mobile\FlashQuizz\src\FlashQuizz\FlashQuizz\FlashQuizz.csproj;x64
+C:\Users\pn25kdv\Documents\GitHub\FlashQuizz_Mobile\FlashQuizz\src\FlashQuizz\FlashQuizz\FlashQuizz.csproj;x64
