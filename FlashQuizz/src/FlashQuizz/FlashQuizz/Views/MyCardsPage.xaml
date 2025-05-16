@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlashQuizz.Views.MyCardsPage"
+             xmlns:viewmodel="clr-namespace:FlashQuizz.ViewModels"
+             Title="My Cards"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <ContentPage.BindingContext>
+        <viewmodel:MainViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid RowDefinitions="Auto,*,Auto" Padding="20">
+        <!-- Header -->
+        <Label Text="Let's Practice!" 
+               FontSize="28" 
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="{DynamicResource PrimaryTextColor}"
+               Grid.Row="0"/>
+
+        <!-- Cards List -->
+        <RefreshView Grid.Row="1"
+                     Command="{Binding RefreshCardsCommand}"
+                     IsRefreshing="{Binding IsRefreshing}">
+            <CollectionView ItemsSource="{Binding Cards}" 
+                            SelectionMode="None"
+                            EmptyView="No cards available. Add your first card!">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="15" 
+                               Margin="0,5" 
+                               BackgroundColor="{DynamicResource CardBackgroundColor}"
+                               BorderColor="{DynamicResource CardBorderColor}">
+                            <Grid ColumnDefinitions="*,Auto">
+                                <Label Text="{Binding Question}" 
+                                       FontSize="16"
+                                       TextColor="{DynamicResource PrimaryTextColor}"
+                                       LineBreakMode="WordWrap"
+                                       Grid.Column="0"/>
+                                <Button Text="⋮" 
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MainViewModel}}, Path=EditCardCommand}"
+                                        CommandParameter="{Binding .}"
+                                        BackgroundColor="Transparent"
+                                        TextColor="{DynamicResource PrimaryTextColor}"
+                                        Grid.Column="1"/>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+
+        <!-- Footer Buttons -->
+        <StackLayout Grid.Row="2" Spacing="15">
+            <Button Text="Add a Card" 
+                    Command="{Binding AddCardCommand}"
+                    Style="{DynamicResource PrimaryButtonStyle}"/>
+
+            <Button Text="Start Learning" 
+                    Command="{Binding StartLearningCommand}"
+                    Style="{DynamicResource PrimaryButtonStyle}"
+                    IsEnabled="{Binding HasCards}"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

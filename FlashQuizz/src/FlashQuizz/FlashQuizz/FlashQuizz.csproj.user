@@ -7,11 +7,6 @@
     <SelectedPlatformGroup>PhysicalDevice</SelectedPlatformGroup>
   </PropertyGroup>
   <ItemGroup>
-    <MauiXaml Update="Views\MesCartes.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-  </ItemGroup>
-  <ItemGroup>
     <None Update="App.xaml">
       <SubType>Designer</SubType>
     </None>
