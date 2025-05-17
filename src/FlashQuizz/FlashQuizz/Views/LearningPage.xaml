@@ -2,11 +2,72 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FlashQuizz.Views.LearningPage"
-             Title="LearningPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             xmlns:components="clr-namespace:FlashQuizz.Views.Components"
+             xmlns:views="clr-namespace:FlashQuizz.Views"
+             xmlns:ViewModels="clr-namespace:FlashQuizz.ViewModels"
+             Title="Apprentissage"
+             BackgroundColor="{StaticResource PageBackground}">
+
+    <!-- Корневая сетка с перекрытием элементов -->
+    <Grid>
+
+        <!-- Основной контент страницы с нижним отступом под кнопку -->
+        <Grid RowDefinitions="*,Auto,Auto" Padding="20" Margin="0,0,0,80">
+
+            <!-- Flashcard -->
+            <Frame Grid.Row="0"
+                   BackgroundColor="{StaticResource CardBackground}"
+                   BorderColor="{StaticResource Primary}"
+                   CornerRadius="15"
+                   Padding="20"
+                   VerticalOptions="Center">
+
+                <StackLayout>
+                    <Button Text="Je ne connais pas - Stop" 
+                            Command="{Binding DontKnowCardCommand}"
+                            Style="{StaticResource DangerButton}"/>
+
+                    <Label Text="{Binding CurrentCard.Question, StringFormat='Q: {0}'}" 
+                           IsVisible="{Binding IsQuestionShowing}"
+                           FontSize="20"
+                           TextColor="{StaticResource PrimaryText}"/>
+
+                    <Label Text="{Binding CurrentCard.Answer, StringFormat='A: {0}'}" 
+                           IsVisible="{Binding !IsQuestionShowing}"
+                           FontSize="20"
+                           TextColor="{StaticResource PrimaryText}"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Progress -->
+            <Label Grid.Row="1"
+                   Text="{Binding ProgressText}"
+                   FontSize="14"
+                   TextColor="{StaticResource SecondaryText}"
+                   HorizontalOptions="Center"/>
+
+            <!-- Actions -->
+            <StackLayout Grid.Row="2" Spacing="15">
+                <Button Text="Voir la réponse" 
+                        Command="{Binding ShowAnswerCommand}"
+                        IsVisible="{Binding IsQuestionShowing}"
+                        Style="{StaticResource PrimaryButton}"/>
+
+                <StackLayout Orientation="Horizontal" 
+                             Spacing="15"
+                             HorizontalOptions="Center"
+                             IsVisible="{Binding !IsQuestionShowing}">
+                    <Button Text="Je connais" 
+                            Command="{Binding KnowCardCommand}"
+                            Style="{StaticResource SuccessButton}"/>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+
+        <!-- button Home-->
+        <components:GoHomeButton 
+            HorizontalOptions="End"
+            VerticalOptions="End"
+            Margin="0"/>
+    </Grid>
 </ContentPage>

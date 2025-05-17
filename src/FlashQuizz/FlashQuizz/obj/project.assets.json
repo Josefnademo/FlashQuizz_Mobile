@@ -65403,11 +65403,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hdjdj\\OneDrive\\Документи\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\FlashQuizz.csproj",
+      "projectUniqueName": "C:\\Users\\hdjdj\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\FlashQuizz.csproj",
       "projectName": "FlashQuizz",
-      "projectPath": "C:\\Users\\hdjdj\\OneDrive\\Документи\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\FlashQuizz.csproj",
+      "projectPath": "C:\\Users\\hdjdj\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\FlashQuizz.csproj",
       "packagesPath": "C:\\Users\\hdjdj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hdjdj\\OneDrive\\Документи\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\obj\\",
+      "outputPath": "C:\\Users\\hdjdj\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [

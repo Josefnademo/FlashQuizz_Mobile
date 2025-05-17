@@ -1,4 +1,5 @@
-﻿namespace FlashQuizz
+﻿using FlashQuizz.ViewModels;
+namespace FlashQuizz
 {
     public partial class App : Application
     {
@@ -6,13 +7,7 @@
         {
             InitializeComponent();
 
-            var navPage = new NavigationPage(new MainPage())
-            {
-                BarBackgroundColor = Colors.DeepSkyBlue,
-                BarTextColor = Colors.White
-            };
-
-            MainPage = navPage;
+            MainPage = new AppShell();
         }
     }
 }

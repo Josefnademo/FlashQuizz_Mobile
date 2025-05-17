@@ -73,6 +73,9 @@
 	  <MauiXaml Update="Views\AddEditCardPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Components\GoHomeButton.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\LearningPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -1,26 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:FlashQuizz.Views"
              xmlns:ViewModels="clr-namespace:FlashQuizz.ViewModels"
-             x:Class="FlashQuizz.MainPage">
-
-    <ContentPage.BindingContext>
-        <ViewModels:MainViewModel/>
-    </ContentPage.BindingContext>
+             x:Class="FlashQuizz.Views.MainPage">
 
 
     <Grid RowDefinitions="*,*,*,*" Padding="70" 
           BackgroundColor="#121212">
 
-        <!-- Background Gradient -->
-        <BoxView>
-            <BoxView.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="#1a1a2e" Offset="0.1"/>
-                    <GradientStop Color="#16213e" Offset="0.9"/>
-                </LinearGradientBrush>
-            </BoxView.Background>
-        </BoxView>
 
 
         <!-- Logo Section -->

@@ -6,10 +6,21 @@
 
     <!-- Note: For Android please see also Platforms\Android\Resources\values\colors.xml -->
 
-    <Color x:Key="Primary">#512BD4</Color>
+    <!--Colors created by me -->
+    <Color x:Key="Primary">#4a00e0</Color>
+    <Color x:Key="Secondary">#333333</Color>
+    <Color x:Key="Success">#00C853</Color>
+    <Color x:Key="Danger">#FF3D00</Color>
+    <Color x:Key="PageBackground">#121212</Color>
+    <Color x:Key="CardBackground">#1E1E1E</Color>
+    <Color x:Key="PrimaryText">#FFFFFF</Color>
+    <Color x:Key="SecondaryText">#A0A0A0</Color>
+    <!--Colors created for FlashQuizz -->
+
+    <Color x:Key="Primary1">#512BD4</Color>
     <Color x:Key="PrimaryDark">#ac99ea</Color>
     <Color x:Key="PrimaryDarkText">#242424</Color>
-    <Color x:Key="Secondary">#DFD8F7</Color>
+    <Color x:Key="Secondary1">#DFD8F7</Color>
     <Color x:Key="SecondaryDarkText">#9880e5</Color>
     <Color x:Key="Tertiary">#2B0B98</Color>
 

@@ -3,12 +3,34 @@
     x:Class="FlashQuizz.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:Views="clr-namespace:FlashQuizz.Views"
+    xmlns:views="clr-namespace:FlashQuizz.Views"
     xmlns:ViewModels="clr-namespace:FlashQuizz.ViewModels"
     xmlns:local="clr-namespace:FlashQuizz"
-    Shell.FlyoutBehavior="Flyout"
+    Shell.FlyoutBehavior="Disabled"
     Title="FlashQuizz">
 
-    <ShellContent Title="My Cards" ContentTemplate="{DataTemplate Views:MyCardsPage}" />
+    <ShellContent 
+        Title="Main"
+        Route="MainPage"
+        ContentTemplate="{DataTemplate views:MainPage}" />
+    
+    <ShellContent 
+        Title="My Cards" 
+        Route="MyCardsPage" 
+        ContentTemplate="{DataTemplate views:MyCardsPage}" />
 
+    <ShellContent 
+        Title="Add/Edit Card" 
+        Route="AddEditCardPage" 
+        ContentTemplate="{DataTemplate views:AddEditCardPage}" />
+
+    <ShellContent 
+        Title="Learning" 
+        Route="LearningPage" 
+        ContentTemplate="{DataTemplate views:LearningPage}" />
+
+    <ShellContent 
+        Title="Session Summary" 
+        Route="SessionSummaryPage" 
+        ContentTemplate="{DataTemplate views:SessionSummaryPage}" />
 </Shell>

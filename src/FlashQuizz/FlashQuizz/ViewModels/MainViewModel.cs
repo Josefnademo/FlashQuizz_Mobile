@@ -1,115 +1,124 @@
-﻿using System.Collections.ObjectModel;
-using System.Windows.Input;
-using FlashQuizz.Models;
-using FlashQuizz.Views;
+﻿using FlashQuizz.Models;
+using FlashQuizz.Services;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using System.Threading.Tasks;
-using Microsoft.Maui.Controls;
-using System.Runtime.CompilerServices;
+using System.Collections.ObjectModel;
+using System.Text.Json;
+using FlashQuizz.Views;
+using System.Diagnostics;
 
 namespace FlashQuizz.ViewModels
 {
     public partial class MainViewModel : ObservableObject
     {
-        [ObservableProperty]
-        ObservableCollection<FlashCard> cards;
+        private readonly CardService _cardService;
 
         [ObservableProperty]
-        bool isRefreshing;
+        private ObservableCollection<FlashCard> _cards;
 
-        public ICommand AddCardCommand { get; }
-        public ICommand StartLearningCommand { get; }
-        public ICommand RefreshCardsCommand { get; }
-        public ICommand EditCardCommand { get; }
-/*
-        public MainViewModel()
+        [ObservableProperty]
+        private FlashCard _currentCard;
+
+        public MainViewModel(CardService cardService)
         {
-            Cards = new ObservableCollection<FlashCard>();
-
-            // Commands
-            AddCardCommand = new AsyncRelayCommand(OnAddCard);
-            StartLearningCommand = new AsyncRelayCommand(OnStartLearning, CanStartLearning);
-            RefreshCardsCommand = new AsyncRelayCommand(OnRefreshCards);
-            EditCardCommand = new AsyncRelayCommand<FlashCard>(OnEditCard);
-
-            LoadDummyData(); // or loading from the database
-        }*/
-
-        void LoadDummyData()
-        {
-            Cards.Add(new FlashCard { Question = "Quelle est la capitale de la France ?", Answer = "Paris" });
-            Cards.Add(new FlashCard { Question = "Combien font 2 + 2 ?", Answer = "4" });
+            _cardService = cardService;
+            CurrentCard = new FlashCard(); // inticialisation by default 
+            LoadCards();
         }
 
-        bool CanStartLearning()
+        private void LoadCards()
         {
-            return Cards != null && Cards.Count > 0;
+            Cards = _cardService.GetAllCards();
         }
 
-        [ObservableProperty]
-        bool hasCards;
-
-       /* async Task OnAddCard()
+        [RelayCommand]
+        private async Task AddCard()
         {
+            CurrentCard = new FlashCard();
             await Shell.Current.GoToAsync(nameof(AddEditCardPage));
         }
-        
-        async Task OnEditCard(FlashCard selectedCard)
+
+        [RelayCommand]
+        private async Task EditCard(FlashCard card)
         {
-            var parameters = new Dictionary<string, object>
+            if (card == null) return;
+
+            CurrentCard = new FlashCard // Create a copy for editing
             {
-                { "CardToEdit", selectedCard }
+                Id = card.Id,
+                Question = card.Question,
+                Answer = card.Answer,
+                TimesShown = card.TimesShown,
+                TimesCorrect = card.TimesCorrect
             };
 
-            await Shell.Current.GoToAsync(nameof(AddEditCardPage), true, parameters);
+            await Shell.Current.GoToAsync(nameof(AddEditCardPage));
         }
 
-        async Task OnStartLearning()
+        [RelayCommand]
+        private void DeleteCard(FlashCard card)
         {
-            var parameters = new Dictionary<string, object>
+            _cardService.DeleteCard(card);
+            LoadCards();
+        }
+
+        [RelayCommand]
+        private async Task SaveCard()
+        {
+            try
             {
-                { "Cards", Cards.ToList() }
-            };
-
-            await Shell.Current.GoToAsync(nameof(LearningPage), true, parameters);
-        }*/
-
-        async Task OnRefreshCards()
-        {
-            IsRefreshing = true;
-
-            //  download current data from the DB
-            await Task.Delay(1000);
-
-            IsRefreshing = false;
-        }
-
-        // Method to remove a card
-        public void DeleteCard(FlashCard card)
-        {
-            if (Cards.Contains(card))
-                Cards.Remove(card);
-
-            HasCards = Cards.Count > 0;
-        }
-
-        // Method for adding or updating a map
-        public void AddOrUpdateCard(FlashCard card, bool isEdit = false)
-        {
-            if (isEdit)
-            {
-                var existing = Cards.FirstOrDefault(c => c.Id == card.Id);
-                if (existing != null)
+                if (CurrentCard == null)
                 {
-                    existing.Question = card.Question;
-                    existing.Answer = card.Answer;
-                    return;
+                    CurrentCard = new FlashCard(); // Create a new card if null
                 }
-            }
 
-            Cards.Add(card);
-            HasCards = true;
+                if (CurrentCard.Id == 0)
+                {
+                    _cardService.AddCard(CurrentCard);
+                }
+                else
+                {
+                    _cardService.UpdateCard(CurrentCard);
+                }
+
+                LoadCards();
+                await Shell.Current.GoToAsync("..");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error while saving: {ex.Message}");
+                
+                await Application.Current.MainPage.DisplayAlert("Error", "Failed to save card", "OK");
+            }
+        }
+
+        [RelayCommand]
+        private async Task StartLearning()
+        {
+            if (Cards?.Any() == true)
+            {
+                var cardsParam = Uri.EscapeDataString(JsonSerializer.Serialize(Cards.ToList()));
+                await Shell.Current.GoToAsync($"{nameof(LearningPage)}?Cards={cardsParam}");
+            }
+            else
+            {
+                await Application.Current.MainPage.DisplayAlert("Attention", "Aucune carte disponible", "OK");
+            }
+        }
+
+        [RelayCommand]
+        private async Task ViewCards()
+        {
+            try
+            {
+                //absolute 
+                await Shell.Current.GoToAsync($"///{nameof(MyCardsPage)}");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Navigation error: {ex.Message}");
+                await Application.Current.MainPage.DisplayAlert("Error", "Failed to navigate", "OK");
+            }
         }
     }
 }

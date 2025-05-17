@@ -4,6 +4,34 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
+    <!--Styles created by me -->
+    <Style TargetType="Button" x:Key="BaseButton">
+        <Setter Property="CornerRadius" Value="25"/>
+        <Setter Property="HeightRequest" Value="60"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="TextColor" Value="White"/>
+        <Setter Property="Margin" Value="0,10"/>
+    </Style>
+
+    <Style TargetType="Button" x:Key="PrimaryButton" BasedOn="{StaticResource BaseButton}">
+        <Setter Property="BackgroundColor" Value="{StaticResource Primary}"/>
+    </Style>
+
+    <Style TargetType="Button" x:Key="SecondaryButton" BasedOn="{StaticResource BaseButton}">
+        <Setter Property="BackgroundColor" Value="{StaticResource Secondary}"/>
+    </Style>
+
+    <Style TargetType="Button" x:Key="SuccessButton" BasedOn="{StaticResource BaseButton}">
+        <Setter Property="BackgroundColor" Value="{StaticResource Success}"/>
+    </Style>
+
+    <Style TargetType="Button" x:Key="DangerButton" BasedOn="{StaticResource BaseButton}">
+        <Setter Property="BackgroundColor" Value="{StaticResource Danger}"/>
+    </Style>
+
+    <!--Colors created for FlashQuizz -->
+
     <Style TargetType="ActivityIndicator">
         <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
     </Style>

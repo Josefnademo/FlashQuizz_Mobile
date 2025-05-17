@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tZfjGUCWWC8=",
+  "dgSpecHash": "5BDJRVWohSc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\hdjdj\\OneDrive\\Документи\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\FlashQuizz.csproj",
+  "projectFilePath": "C:\\Users\\hdjdj\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\FlashQuizz.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hdjdj\\.nuget\\packages\\communitytoolkit.diagnostics\\8.3.0\\communitytoolkit.diagnostics.8.3.0.nupkg.sha512",
     "C:\\Users\\hdjdj\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.0\\communitytoolkit.mvvm.8.4.0.nupkg.sha512",

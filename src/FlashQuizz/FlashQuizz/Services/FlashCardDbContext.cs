@@ -1,7 +1,5 @@
 ﻿using FlashQuizz.Models;
 using Microsoft.EntityFrameworkCore;
-using System.IO;
-
 namespace FlashQuizz.Services;
 
 public class FlashCardDbContext : DbContext

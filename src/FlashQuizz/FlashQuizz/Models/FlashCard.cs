@@ -1,16 +1,19 @@
-using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace FlashQuizz.Models;
-
-public class FlashCard
+namespace FlashQuizz.Models
 {
-    [Key]
-    public int Id { get; set; }
+    public class FlashCard
+    {
+        public int Id { get; set; }
+        public string Question { get; set; }
+        public string Answer { get; set; }
+        public int TimesShown { get; set; }
+        public int TimesCorrect { get; set; }
 
-    public string Question { get; set; }
-    public string Answer { get; set; }
-    public int TimesShown { get; set; }
-    public int TimesCorrect { get; set; }
-
-    public double SuccessRate => TimesShown == 0 ? 0 : (double)TimesCorrect / TimesShown;
+        public double SuccessRate => TimesShown == 0 ? 0 : (double)TimesCorrect / TimesShown;
+    }
 }

@@ -2,11 +2,88 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FlashQuizz.Views.SessionSummaryPage"
-             Title="SessionSummaryPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             xmlns:components="clr-namespace:FlashQuizz.Views.Components"
+             xmlns:views="clr-namespace:FlashQuizz.Views"
+             xmlns:viewmodel="clr-namespace:FlashQuizz.ViewModels"
+             Title="Résumé"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="25">
+            <Label Text="Session terminée!" 
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="{DynamicResource PrimaryTextColor}"
+                   HorizontalOptions="Center"/>
+
+            <!-- Stats Cards -->
+            <Frame BackgroundColor="{DynamicResource CardBackgroundColor}"
+                   BorderColor="{DynamicResource CardBorderColor}"
+                   Padding="15">
+                <StackLayout Spacing="10">
+                    <Label Text="Temps passé:" 
+                           FontSize="16"
+                           TextColor="{DynamicResource SecondaryTextColor}"/>
+                    <Label Text="{Binding TimeSpent}" 
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="{DynamicResource PrimaryTextColor}"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="{DynamicResource CardBackgroundColor}"
+                   BorderColor="{DynamicResource CardBorderColor}"
+                   Padding="15">
+                <StackLayout Spacing="10">
+                    <Label Text="Carte la plus difficile:" 
+                           FontSize="16"
+                           TextColor="{DynamicResource SecondaryTextColor}"/>
+                    <Label Text="{Binding HardestCard}" 
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="{DynamicResource PrimaryTextColor}"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="{DynamicResource CardBackgroundColor}"
+                   BorderColor="{DynamicResource CardBorderColor}"
+                   Padding="15">
+                <StackLayout Spacing="10">
+                    <Label Text="Cartes maîtrisées:" 
+                           FontSize="16"
+                           TextColor="{DynamicResource SecondaryTextColor}"/>
+                    <Label Text="{Binding PerfectCardsCount}" 
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="{DynamicResource PrimaryTextColor}"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="{DynamicResource CardBackgroundColor}"
+                   BorderColor="{DynamicResource CardBorderColor}"
+                   Padding="15">
+                <StackLayout Spacing="10">
+                    <Label Text="Taux de mémorisation:" 
+                           FontSize="16"
+                           TextColor="{DynamicResource SecondaryTextColor}"/>
+                    <Label Text="{Binding MemorizationPercentage, StringFormat='{0}%'}" 
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="{DynamicResource PrimaryTextColor}"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Action Button -->
+            <Button Text="Retour au menu principal" 
+                   Command="{Binding ReturnToMenuCommand}"
+                   Style="{DynamicResource PrimaryButtonStyle}"/>
+            <!-- button Home-->
+            <components:GoHomeButton 
+     HorizontalOptions="End"
+     VerticalOptions="End"
+     Margin="0"/>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

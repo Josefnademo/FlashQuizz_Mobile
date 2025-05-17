@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlashQuizz.Views.Components.GoHomeButton">
+
+    <Button 
+        ImageSource="invincible_logo_home.png"
+        BackgroundColor="Transparent"
+        WidthRequest="380"
+        HeightRequest="100"
+        Command="{Binding GoHomeCommand}"
+        HorizontalOptions="End"
+        VerticalOptions="Start"
+        Margin="10"/>
+</ContentView>

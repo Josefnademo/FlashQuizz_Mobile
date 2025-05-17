@@ -1,9 +1,12 @@
+
+using FlashQuizz.ViewModels;
 namespace FlashQuizz.Views;
 
 public partial class MyCardsPage : ContentPage
 {
-	public MyCardsPage()
-	{
-		InitializeComponent();
-	}
+    public MyCardsPage(MainViewModel viewModel)
+    {
+        InitializeComponent();
+        BindingContext = viewModel;
+    }
 }
