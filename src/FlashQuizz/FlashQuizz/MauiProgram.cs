@@ -43,7 +43,8 @@ namespace FlashQuizz
         {
             builder.Services.AddTransient<MainPage>();  //AddTransient means that a new instance is created on each request  ; ViewModels are registered as services that can be injected via the constructor
             builder.Services.AddTransient<MyCardsPage>();
-            builder.Services.AddTransient<AddEditCardPage>();
+            builder.Services.AddTransient<AddCardPage>();
+            builder.Services.AddTransient<EditCardPage>();
             builder.Services.AddTransient<LearningPage>();
             builder.Services.AddTransient<SessionSummaryPage>();
             return builder;

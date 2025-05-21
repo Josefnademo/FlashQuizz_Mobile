@@ -26,10 +26,11 @@ namespace FlashQuizz.Services
         /// <summary>
         /// Retrieves all flash cards from the database.
         /// </summary>
-        public List<FlashCard> GetAllCards()
+        public async Task<List<FlashCard>> GetAllCardsAsync()
         {
-            return _dbContext.FlashCards.ToList();
+            return await _dbContext.FlashCards.ToListAsync();
         }
+
 
         /// <summary>
         /// Adds a new flash card to the database.

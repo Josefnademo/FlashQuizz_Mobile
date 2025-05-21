@@ -1,27 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Messaging;
+using CommunityToolkit.Mvvm.Messaging.Messages;
 using FlashQuizz.Models;
 using FlashQuizz.Services;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using System.Collections.ObjectModel;
-using System.Text.Json;
 using FlashQuizz.Views;
-
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 
 namespace FlashQuizz.ViewModels
 {
-    public partial class MyCardsViewModel : CardsViewModelBase
+    public partial class MyCardsViewModel : MainViewModel, IRecipient<CardsChangedMessage> 
     {
         [ObservableProperty]
         private FlashCard selectedCard;
 
         public MyCardsViewModel(CardService cardService) : base(cardService)
         {
-            SubscribeToCardEvents();
+            // Подписка на сообщения о изменении карточек
+            WeakReferenceMessenger.Default.Register<CardsChangedMessage>(this);
         }
 
         partial void OnSelectedCardChanged(FlashCard value)
@@ -33,27 +31,44 @@ namespace FlashQuizz.ViewModels
             }
         }
 
-        private void SubscribeToCardEvents()
+        public void Receive(CardsChangedMessage message)
         {
-            MessagingCenter.Subscribe<object>(this, "CardsChanged", (sender) => LoadCards());
+            _ = LoadCardsAsync();
         }
 
         [RelayCommand]
         public async Task EditCard(FlashCard card)
         {
-            if (card == null) return;
-            var navParams = new Dictionary<string, object>
-            {
-                { "CardToEdit", System.Text.Json.JsonSerializer.Serialize(card) }
-            };
-            await Shell.Current.GoToAsync(nameof(AddEditCardPage), navParams);
+            if (card == null)
+                return;
+
+            string serializedCard = System.Text.Json.JsonSerializer.Serialize(card);
+            // Кодируем, чтобы не было проблем с символами в URI
+            string encodedCard = Uri.EscapeDataString(serializedCard);
+
+            // Абсолютный маршрут с query-параметром
+            string route = $"//{nameof(EditCardPage)}?CardToEdit={encodedCard}";
+
+            await Shell.Current.GoToAsync(route);
         }
+
+
+
         [RelayCommand]
-        private void DeleteCard(FlashCard card)
+        public void DeleteCard(FlashCard card)
         {
-            if (card == null) return;
+            if (card == null)
+                return;
+
             _cardService.DeleteCard(card);
-            MessagingCenter.Send(this, "CardsChanged");
+
+            // Отправляем сообщение, чтобы обновить списки
+            WeakReferenceMessenger.Default.Send(new CardsChangedMessage());
         }
+    }
+
+    public class CardsChangedMessage : ValueChangedMessage<bool>
+    {
+        public CardsChangedMessage() : base(true) { }
     }
 }

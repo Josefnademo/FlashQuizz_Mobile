@@ -4,12 +4,11 @@
              x:Class="FlashQuizz.Views.MyCardsPage"
              xmlns:components="clr-namespace:FlashQuizz.Views.Components"
              x:Name="CardsPage"
-             Title="Mes cartes"
              BackgroundColor="{DynamicResource PageBackgroundColor}">
 
-    <Grid RowDefinitions="Auto,*,Auto" Padding="20">
+    <Grid RowDefinitions="Auto,*,Auto" Padding="20" BackgroundColor="#121212">
         <!-- Header -->
-        <Label Text="Let's Practice!" 
+        <Label Text="Mes cartes"  
                FontSize="28" 
                FontAttributes="Bold"
                HorizontalOptions="Center"
@@ -43,9 +42,10 @@
 
         <!-- Footer Button -->
         <StackLayout Grid.Row="2" Spacing="15">
-            <Button Text="Add a Card" 
+            <Button Text="Ajouter une carte" 
                     Command="{Binding AddCardCommand}"
-                    Style="{DynamicResource PrimaryButtonStyle}"/>
+                    Style="{DynamicResource PrimaryButtonStyle}"
+                    BackgroundColor="lightGreen"/>
             <components:GoHomeButton HorizontalOptions="End" VerticalOptions="End" Margin="-10"/>
         </StackLayout>
     </Grid>

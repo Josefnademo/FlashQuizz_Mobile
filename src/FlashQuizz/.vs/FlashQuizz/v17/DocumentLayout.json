@@ -3,92 +3,108 @@
   "WorkspaceRootPath": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\views\\addeditcardpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\views\\addeditcardpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\views\\learningpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\views\\learningpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\views\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\views\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\views\\mycardspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\views\\mycardspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\views\\mycardspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\views\\mycardspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\views\\components\\gohomebutton.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\views\\components\\gohomebutton.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\viewmodels\\sessionsummaryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\viewmodels\\sessionsummaryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\viewmodels\\mycardsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\viewmodels\\mycardsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\viewmodels\\cardsviewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\viewmodels\\cardsviewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\views\\addeditcardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\views\\addeditcardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\services\\cardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\services\\cardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\viewmodels\\learningviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\viewmodels\\learningviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\services\\flashcarddbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\services\\flashcarddbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\views\\sessionsummarypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\views\\sessionsummarypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\views\\learningpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\views\\learningpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\views\\learningpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\views\\learningpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\views\\mycardspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\views\\mycardspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\views\\addcardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\views\\addcardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\views\\editcardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\views\\editcardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\viewmodels\\mycardsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\viewmodels\\mycardsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\viewmodels\\cardsviewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\viewmodels\\cardsviewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\views\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\views\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\views\\editcardpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\views\\editcardpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\views\\mycardspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\views\\mycardspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\views\\addcardpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\views\\addcardpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\viewmodels\\learningviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\viewmodels\\learningviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\models\\flashcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\models\\flashcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\viewmodels\\sessionsummaryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\viewmodels\\sessionsummaryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\views\\sessionsummarypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\views\\sessionsummarypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\models\\sessionstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\models\\sessionstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\services\\cardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\services\\cardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\services\\flashcarddbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\services\\flashcarddbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\views\\components\\gohomebutton.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\views\\components\\gohomebutton.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\views\\components\\gohomebutton.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\views\\components\\gohomebutton.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\views\\sessionsummarypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\views\\sessionsummarypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\models\\flashcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\models\\flashcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -97,10 +113,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\models\\sessionstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|solutionrelative:flashquizz\\models\\sessionstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{752B2F7C-3706-4CDA-B4A0-016FC0616E0B}|FlashQuizz\\FlashQuizz.csproj|c:\\users\\vpirk\\onedrive\\documents\\github\\flashquizz_mobile\\src\\flashquizz\\flashquizz\\resources\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -118,7 +130,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 30,
           "Children": [
             {
               "$type": "Bookmark",
@@ -134,33 +146,85 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SessionSummaryPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\SessionSummaryPage.xaml.cs",
+              "RelativeDocumentMoniker": "FlashQuizz\\Views\\SessionSummaryPage.xaml.cs",
+              "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\SessionSummaryPage.xaml.cs",
+              "RelativeToolTip": "FlashQuizz\\Views\\SessionSummaryPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T14:01:36.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 11,
+              "Title": "EditCardPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\EditCardPage.xaml.cs",
+              "RelativeDocumentMoniker": "FlashQuizz\\Views\\EditCardPage.xaml.cs",
+              "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\EditCardPage.xaml.cs",
+              "RelativeToolTip": "FlashQuizz\\Views\\EditCardPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T13:27:02.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EditCardPage.xaml",
+              "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\EditCardPage.xaml",
+              "RelativeDocumentMoniker": "FlashQuizz\\Views\\EditCardPage.xaml",
+              "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\EditCardPage.xaml",
+              "RelativeToolTip": "FlashQuizz\\Views\\EditCardPage.xaml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-21T13:26:42.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AddCardPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\AddCardPage.xaml.cs",
+              "RelativeDocumentMoniker": "FlashQuizz\\Views\\AddCardPage.xaml.cs",
+              "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\AddCardPage.xaml.cs",
+              "RelativeToolTip": "FlashQuizz\\Views\\AddCardPage.xaml.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAkwCAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T13:19:06.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddCardPage.xaml",
+              "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\AddCardPage.xaml",
+              "RelativeDocumentMoniker": "FlashQuizz\\Views\\AddCardPage.xaml",
+              "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\AddCardPage.xaml",
+              "RelativeToolTip": "FlashQuizz\\Views\\AddCardPage.xaml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAwDcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-21T13:18:09.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "CardsViewModelBase.cs",
               "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\ViewModels\\CardsViewModelBase.cs",
               "RelativeDocumentMoniker": "FlashQuizz\\ViewModels\\CardsViewModelBase.cs",
               "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\ViewModels\\CardsViewModelBase.cs",
               "RelativeToolTip": "FlashQuizz\\ViewModels\\CardsViewModelBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAvwCcAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T12:03:05.377Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AddEditCardPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\AddEditCardPage.xaml.cs",
-              "RelativeDocumentMoniker": "FlashQuizz\\Views\\AddEditCardPage.xaml.cs",
-              "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\AddEditCardPage.xaml.cs",
-              "RelativeToolTip": "FlashQuizz\\Views\\AddEditCardPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T11:40:01.174Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 23,
               "Title": "FlashCardDbContext.cs",
               "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Services\\FlashCardDbContext.cs",
               "RelativeDocumentMoniker": "FlashQuizz\\Services\\FlashCardDbContext.cs",
@@ -173,46 +237,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 7,
               "Title": "MyCardsViewModel.cs",
               "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\ViewModels\\MyCardsViewModel.cs",
               "RelativeDocumentMoniker": "FlashQuizz\\ViewModels\\MyCardsViewModel.cs",
               "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\ViewModels\\MyCardsViewModel.cs",
               "RelativeToolTip": "FlashQuizz\\ViewModels\\MyCardsViewModel.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAwC4AAABRAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T10:06:18.982Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 1,
               "Title": "LearningPage.xaml",
               "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\LearningPage.xaml",
               "RelativeDocumentMoniker": "FlashQuizz\\Views\\LearningPage.xaml",
               "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\LearningPage.xaml",
               "RelativeToolTip": "FlashQuizz\\Views\\LearningPage.xaml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAiwDcAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAcwDsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-05-21T09:28:01.653Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "LearningPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\LearningPage.xaml.cs",
               "RelativeDocumentMoniker": "FlashQuizz\\Views\\LearningPage.xaml.cs",
               "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\LearningPage.xaml.cs",
               "RelativeToolTip": "FlashQuizz\\Views\\LearningPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T09:03:42.916Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "MainPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "FlashQuizz\\Views\\MainPage.xaml.cs",
@@ -225,46 +289,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "MyCardsPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\MyCardsPage.xaml.cs",
               "RelativeDocumentMoniker": "FlashQuizz\\Views\\MyCardsPage.xaml.cs",
               "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\MyCardsPage.xaml.cs",
               "RelativeToolTip": "FlashQuizz\\Views\\MyCardsPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T08:42:42.967Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 21,
               "Title": "CardService.cs",
               "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Services\\CardService.cs",
               "RelativeDocumentMoniker": "FlashQuizz\\Services\\CardService.cs",
               "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Services\\CardService.cs",
               "RelativeToolTip": "FlashQuizz\\Services\\CardService.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAAwAoAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAABwAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T08:35:03.356Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 24,
               "Title": "GoHomeButton.xaml.cs",
               "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\Components\\GoHomeButton.xaml.cs",
               "RelativeDocumentMoniker": "FlashQuizz\\Views\\Components\\GoHomeButton.xaml.cs",
               "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\Components\\GoHomeButton.xaml.cs",
               "RelativeToolTip": "FlashQuizz\\Views\\Components\\GoHomeButton.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T08:22:57.216Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "GoHomeButton.xaml",
               "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\Components\\GoHomeButton.xaml",
               "RelativeDocumentMoniker": "FlashQuizz\\Views\\Components\\GoHomeButton.xaml",
@@ -277,20 +341,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "MauiProgram.cs",
               "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\MauiProgram.cs",
               "RelativeDocumentMoniker": "FlashQuizz\\MauiProgram.cs",
               "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\MauiProgram.cs",
               "RelativeToolTip": "FlashQuizz\\MauiProgram.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAqwBwAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAUwDAAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T08:19:18.295Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\App.xaml.cs",
               "RelativeDocumentMoniker": "FlashQuizz\\App.xaml.cs",
@@ -298,25 +362,24 @@
               "RelativeToolTip": "FlashQuizz\\App.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T08:19:11.32Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-21T08:19:11.32Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 13,
               "Title": "AppShell.xaml.cs",
               "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\AppShell.xaml.cs",
               "RelativeDocumentMoniker": "FlashQuizz\\AppShell.xaml.cs",
               "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\AppShell.xaml.cs",
               "RelativeToolTip": "FlashQuizz\\AppShell.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T08:19:09.583Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\App.xaml",
               "RelativeDocumentMoniker": "FlashQuizz\\App.xaml",
@@ -329,26 +392,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 15,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\AppShell.xaml",
               "RelativeDocumentMoniker": "FlashQuizz\\AppShell.xaml",
               "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\AppShell.xaml",
               "RelativeToolTip": "FlashQuizz\\AppShell.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-05-21T08:19:04.231Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 18,
               "Title": "SessionSummaryViewModel.cs",
               "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\ViewModels\\SessionSummaryViewModel.cs",
               "RelativeDocumentMoniker": "FlashQuizz\\ViewModels\\SessionSummaryViewModel.cs",
               "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\ViewModels\\SessionSummaryViewModel.cs",
               "RelativeToolTip": "FlashQuizz\\ViewModels\\SessionSummaryViewModel.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T08:13:59.928Z",
               "EditorCaption": ""
@@ -361,27 +424,27 @@
               "RelativeDocumentMoniker": "FlashQuizz\\ViewModels\\MainViewModel.cs",
               "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\ViewModels\\MainViewModel.cs",
               "RelativeToolTip": "FlashQuizz\\ViewModels\\MainViewModel.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwC8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T08:13:58.965Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "LearningViewModel.cs",
               "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\ViewModels\\LearningViewModel.cs",
               "RelativeDocumentMoniker": "FlashQuizz\\ViewModels\\LearningViewModel.cs",
               "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\ViewModels\\LearningViewModel.cs",
               "RelativeToolTip": "FlashQuizz\\ViewModels\\LearningViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAAowFQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T08:13:58.207Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "Styles.xaml",
               "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Resources\\Styles\\Styles.xaml",
               "RelativeDocumentMoniker": "FlashQuizz\\Resources\\Styles\\Styles.xaml",
@@ -394,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "Colors.xaml",
               "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Resources\\Styles\\Colors.xaml",
               "RelativeDocumentMoniker": "FlashQuizz\\Resources\\Styles\\Colors.xaml",
@@ -407,78 +470,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 20,
               "Title": "SessionStats.cs",
               "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Models\\SessionStats.cs",
               "RelativeDocumentMoniker": "FlashQuizz\\Models\\SessionStats.cs",
               "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Models\\SessionStats.cs",
               "RelativeToolTip": "FlashQuizz\\Models\\SessionStats.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T08:13:45.762Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 17,
               "Title": "FlashCard.cs",
               "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Models\\FlashCard.cs",
               "RelativeDocumentMoniker": "FlashQuizz\\Models\\FlashCard.cs",
               "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Models\\FlashCard.cs",
               "RelativeToolTip": "FlashQuizz\\Models\\FlashCard.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T08:13:45.03Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 0,
               "Title": "SessionSummaryPage.xaml",
               "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\SessionSummaryPage.xaml",
               "RelativeDocumentMoniker": "FlashQuizz\\Views\\SessionSummaryPage.xaml",
               "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\SessionSummaryPage.xaml",
               "RelativeToolTip": "FlashQuizz\\Views\\SessionSummaryPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABFAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAE4AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-05-21T08:13:36.794Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AddEditCardPage.xaml",
-              "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\AddEditCardPage.xaml",
-              "RelativeDocumentMoniker": "FlashQuizz\\Views\\AddEditCardPage.xaml",
-              "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\AddEditCardPage.xaml",
-              "RelativeToolTip": "FlashQuizz\\Views\\AddEditCardPage.xaml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAD8AAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-21T08:13:35.68Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\MainPage.xaml",
               "RelativeDocumentMoniker": "FlashQuizz\\Views\\MainPage.xaml",
               "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\MainPage.xaml",
               "RelativeToolTip": "FlashQuizz\\Views\\MainPage.xaml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAiwCMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-05-21T08:13:33.771Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "MyCardsPage.xaml",
               "DocumentMoniker": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\MyCardsPage.xaml",
               "RelativeDocumentMoniker": "FlashQuizz\\Views\\MyCardsPage.xaml",
               "ToolTip": "C:\\Users\\vpirk\\OneDrive\\Documents\\GitHub\\FlashQuizz_Mobile\\src\\FlashQuizz\\FlashQuizz\\Views\\MyCardsPage.xaml",
               "RelativeToolTip": "FlashQuizz\\Views\\MyCardsPage.xaml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAowCcAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAADIAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-05-21T07:56:45.642Z",
               "EditorCaption": ""

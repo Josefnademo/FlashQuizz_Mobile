@@ -11,7 +11,7 @@
 
 
     <ScrollView>
-        <StackLayout Padding="20" Spacing="25">
+        <StackLayout Padding="20" Spacing="25" BackgroundColor="#121212">
             <Label Text="Session terminée!" 
                    FontSize="28"
                    FontAttributes="Bold"

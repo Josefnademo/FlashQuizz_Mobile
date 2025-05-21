@@ -55,17 +55,23 @@ build_metadata.AdditionalFiles.ManifestResourceName = FlashQuizz.Resources.Style
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/vpirk/OneDrive/Documents/GitHub/FlashQuizz_Mobile/src/FlashQuizz/FlashQuizz/Views/AddEditCardPage.xaml]
+[C:/Users/vpirk/OneDrive/Documents/GitHub/FlashQuizz_Mobile/src/FlashQuizz/FlashQuizz/Views/AddCardPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = FlashQuizz.Views.AddEditCardPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\AddEditCardPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\AddEditCardPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FlashQuizz.Views.AddCardPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\AddCardPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\AddCardPage.xaml
 
 [C:/Users/vpirk/OneDrive/Documents/GitHub/FlashQuizz_Mobile/src/FlashQuizz/FlashQuizz/Views/Components/GoHomeButton.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlashQuizz.Views.Components.GoHomeButton.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Components\GoHomeButton.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Components\GoHomeButton.xaml
+
+[C:/Users/vpirk/OneDrive/Documents/GitHub/FlashQuizz_Mobile/src/FlashQuizz/FlashQuizz/Views/EditCardPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FlashQuizz.Views.EditCardPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\EditCardPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\EditCardPage.xaml
 
 [C:/Users/vpirk/OneDrive/Documents/GitHub/FlashQuizz_Mobile/src/FlashQuizz/FlashQuizz/Views/LearningPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

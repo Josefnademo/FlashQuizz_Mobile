@@ -1,12 +1,15 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using FlashQuizz.Models;
+using FlashQuizz.Services;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CommunityToolkit.Mvvm.ComponentModel;
-using FlashQuizz.Models;
-using FlashQuizz.Services;
-using System.Collections.ObjectModel;
+using FlashQuizz.Views;
+using System.Diagnostics;
 
 namespace FlashQuizz.ViewModels
 {
@@ -17,15 +20,31 @@ namespace FlashQuizz.ViewModels
         [ObservableProperty]
         private ObservableCollection<FlashCard> cards;
 
+
+        [ObservableProperty]
+        private FlashCard currentCard;
+
+
         public CardsViewModelBase(CardService cardService)
         {
+            CurrentCard = new FlashCard();
             _cardService = cardService;
-            LoadCards();
+            LoadCardsAsync();
         }
 
-        protected void LoadCards()
+
+        [RelayCommand]
+        private async Task AddCard()
         {
-            var cardsFromDb = _cardService.GetAllCards();
+            CurrentCard = new FlashCard();
+            await Shell.Current.GoToAsync($"//{nameof(AddCardPage)}");
+
+        }
+
+
+        protected async Task LoadCardsAsync()
+        {
+            var cardsFromDb = await _cardService.GetAllCardsAsync();
 
             if (Cards == null)
                 Cards = new ObservableCollection<FlashCard>(cardsFromDb);
@@ -36,5 +55,7 @@ namespace FlashQuizz.ViewModels
                     Cards.Add(card);
             }
         }
+
     }
 }
+

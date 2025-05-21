@@ -19,12 +19,7 @@ namespace FlashQuizz.ViewModels
             CurrentCard = new FlashCard();
         }
 
-        [RelayCommand]
-        private async Task AddCard()
-        {
-            CurrentCard = new FlashCard();
-            await Shell.Current.GoToAsync(nameof(AddEditCardPage));
-        }
+     
 
         [RelayCommand]
         private async Task SaveCard()
@@ -36,7 +31,7 @@ namespace FlashQuizz.ViewModels
                 else
                     _cardService.UpdateCard(CurrentCard);
 
-                LoadCards();
+                LoadCardsAsync();
                 await Shell.Current.GoToAsync("..");
             }
             catch (Exception ex)
@@ -44,8 +39,6 @@ namespace FlashQuizz.ViewModels
                 await Application.Current.MainPage.DisplayAlert("Error", "Failed to save card", "OK");
             }
         }
-
-
 
 
         /// <summary>

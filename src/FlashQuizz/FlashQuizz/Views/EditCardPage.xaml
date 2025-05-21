@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:components="clr-namespace:FlashQuizz.Views.Components"
+             x:Class="FlashQuizz.Views.EditCardPage"
+             xmlns:views="clr-namespace:FlashQuizz.Views"
+             xmlns:ViewModels="clr-namespace:FlashQuizz.ViewModels"
+             Title="{Binding Title}"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+
+    <ScrollView>
+        <StackLayout BackgroundColor="#121212" Padding="20" Spacing="20">
+            <!-- Header -->
+            <Label Text="Edition" 
+       FontSize="28" 
+       FontAttributes="Bold"
+       HorizontalOptions="Center"
+       TextColor="{DynamicResource PrimaryTextColor}"
+       Grid.Row="0"/>
+
+            <!-- Question Section -->
+            <Frame BackgroundColor="{DynamicResource CardBackgroundColor}"
+                   BorderColor="#DDDDDD" CornerRadius="10" Padding="15">
+                <StackLayout Spacing="5">
+                    <Label Text="Question:" 
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="{DynamicResource SecondaryTextColor}"/>
+                    <Editor Text="{Binding CurrentCard.Question}" 
+                            Placeholder="Enter your question..."
+                            AutoSize="TextChanges"
+                            MaxLength="255"
+                            TextColor="{DynamicResource PrimaryTextColor}"/>
+                    <Label Text="{Binding QuestionLength, StringFormat='{0}/255 characters'}"
+                           FontSize="12"
+                           HorizontalOptions="End"
+                           TextColor="{DynamicResource SecondaryTextColor}"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Answer Section -->
+            <Frame BackgroundColor="{DynamicResource CardBackgroundColor}"
+                   BorderColor="{DynamicResource CardBorderColor}"
+                   Padding="15">
+                <StackLayout Spacing="5">
+                    <Label Text="Reponse:" 
+                           FontSize="20"
+                           TextColor="{DynamicResource SecondaryTextColor}"/>
+                    <Editor Text="{Binding CurrentCard.Answer}" 
+                            Placeholder="Enter the answer..."
+                            AutoSize="TextChanges"
+                            MaxLength="255"
+                            TextColor="{DynamicResource PrimaryTextColor}"/>
+                    <Label Text="{Binding AnswerLength, StringFormat='{0}/255 characters'}"
+                           FontSize="20"
+                           HorizontalOptions="End"
+                           TextColor="{DynamicResource SecondaryTextColor}"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Action Buttons -->
+            <Button Text="Editer" 
+                    BackgroundColor="#562ECC"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Command="{Binding SaveCardCommand}"
+                    Style="{DynamicResource PrimaryButtonStyle}"
+                    FontSize="20"/>
+
+            <Button Text="Annuler" 
+                    Command="{Binding CancelCommand}"
+                    Style="{DynamicResource SecondaryButtonStyle}"
+                    IsVisible="{Binding IsEditing}"
+                    FontSize="20"/>
+            <!-- button Home-->
+            <components:GoHomeButton HorizontalOptions="End" VerticalOptions="End" Margin="-10"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

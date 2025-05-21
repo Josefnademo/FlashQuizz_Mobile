@@ -20,9 +20,14 @@
         ContentTemplate="{DataTemplate views:MyCardsPage}" />
 
     <ShellContent 
-        Title="Add/Edit Card" 
-        Route="AddEditCardPage" 
-        ContentTemplate="{DataTemplate views:AddEditCardPage}" />
+        Title="Add Card" 
+        Route="AddCardPage" 
+        ContentTemplate="{DataTemplate views:AddCardPage}" />
+
+    <ShellContent 
+    Title="Edit Card" 
+    Route="EditCardPage" 
+    ContentTemplate="{DataTemplate views:EditCardPage}" />
 
     <ShellContent 
         Title="Learning" 
@@ -33,4 +38,5 @@
         Title="Session Summary" 
         Route="SessionSummaryPage" 
         ContentTemplate="{DataTemplate views:SessionSummaryPage}" />
+    
 </Shell>

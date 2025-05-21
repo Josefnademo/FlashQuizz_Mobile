@@ -12,7 +12,7 @@
     <Grid>
 
 
-        <Grid RowDefinitions="*,Auto,Auto" Padding="20" Margin="0,0,0,80">
+        <Grid RowDefinitions="*,Auto,Auto" Padding="20" Margin="0,0,0,80" BackgroundColor="#121212" >
 
             <!-- Flashcard -->
             <Frame Grid.Row="0"
@@ -23,7 +23,7 @@
                    VerticalOptions="Center">
 
                 <StackLayout>
-                    <Button Text="Je ne connais pas - Stop" 
+                    <Button Text="Stop" 
                             Command="{Binding DontKnowCardCommand}"
                             Style="{StaticResource DangerButton}"/>
 
