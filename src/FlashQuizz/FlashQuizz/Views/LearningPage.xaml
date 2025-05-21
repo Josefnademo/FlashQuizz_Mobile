@@ -64,7 +64,10 @@
             </StackLayout>
         </Grid>
 
-        <!-- Button Home-->
-        <components:GoHomeButton HorizontalOptions="End" VerticalOptions="End" Margin="10"/>
+        <!-- button Home-->
+        <components:GoHomeButton 
+HorizontalOptions="End" 
+VerticalOptions="End" 
+Margin="-10"/>
     </Grid>
 </ContentPage>

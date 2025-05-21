@@ -61,7 +61,7 @@
 
             <!-- Action Buttons -->
             <Button Text="Editer" 
-                    BackgroundColor="#562ECC"
+                    BackgroundColor="Blue"
                     TextColor="White"
                     CornerRadius="10"
                     Command="{Binding SaveCardCommand}"
@@ -74,7 +74,10 @@
                     IsVisible="{Binding IsEditing}"
                     FontSize="20"/>
             <!-- button Home-->
-            <components:GoHomeButton HorizontalOptions="End" VerticalOptions="End" Margin="-10"/>
+            <components:GoHomeButton 
+HorizontalOptions="End" 
+VerticalOptions="End" 
+Margin="-10"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>

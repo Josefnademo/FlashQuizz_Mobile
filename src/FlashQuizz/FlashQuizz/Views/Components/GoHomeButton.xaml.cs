@@ -8,16 +8,29 @@ namespace FlashQuizz.Views.Components
 {
     public partial class GoHomeButton : ContentView
     {
-        // Конструктор по умолчанию для XAML
+        public ICommand GoHomeCommand { get; }
+
         public GoHomeButton()
         {
             InitializeComponent();
+            GoHomeCommand = new AsyncRelayCommand(NavigateHomeAsync);
+            BindingContext = this;
         }
 
-        // Ваш кастомный конструктор для передачи ViewModel вручную
-        public GoHomeButton(MainViewModel viewModel) : this()
+        /// <summary>
+        /// Navigates to the Begining page (MainPage).
+        /// </summary>
+        private async Task NavigateHomeAsync()
         {
-            BindingContext = viewModel;
+            try
+            {
+                await Shell.Current.GoToAsync($"///{nameof(MainPage)}");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Navigation error: {ex.Message}");
+            }
         }
     }
+
 }

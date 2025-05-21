@@ -111,11 +111,6 @@
             Navigates to the page displaying all flashcards (MyCardsPage).
             </summary>
         </member>
-        <member name="M:FlashQuizz.ViewModels.MainViewModel.GoHomeCommand">
-            <summary>
-            Navigates to the Begining page (MainPage).
-            </summary>
-        </member>
         <member name="P:FlashQuizz.ViewModels.MainViewModel.CurrentCard">
             <inheritdoc cref="F:FlashQuizz.ViewModels.MainViewModel.currentCard"/>
         </member>
@@ -180,6 +175,11 @@
         </member>
         <member name="P:FlashQuizz.ViewModels.SessionSummaryViewModel.ReturnToMenuCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FlashQuizz.ViewModels.SessionSummaryViewModel.ReturnToMenu"/>.</summary>
+        </member>
+        <member name="M:FlashQuizz.Views.Components.GoHomeButton.NavigateHomeAsync">
+            <summary>
+            Navigates to the Begining page (MainPage).
+            </summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.Messaging.__Internals.__IMessengerExtensions">
             <summary>

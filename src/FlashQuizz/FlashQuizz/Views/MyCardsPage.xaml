@@ -8,11 +8,11 @@
 
     <Grid RowDefinitions="Auto,*,Auto" Padding="20" BackgroundColor="#121212">
         <!-- Header -->
-        <Label Text="Mes cartes"  
+        <Label Text="Mes cartes"
+               TextColor="White"
                FontSize="28" 
                FontAttributes="Bold"
                HorizontalOptions="Center"
-               TextColor="{DynamicResource PrimaryTextColor}"
                Grid.Row="0"/>
 
         <!-- Cards List -->
@@ -46,7 +46,11 @@
                     Command="{Binding AddCardCommand}"
                     Style="{DynamicResource PrimaryButtonStyle}"
                     BackgroundColor="lightGreen"/>
-            <components:GoHomeButton HorizontalOptions="End" VerticalOptions="End" Margin="-10"/>
+            <!-- button Home-->
+            <components:GoHomeButton 
+HorizontalOptions="End" 
+VerticalOptions="End" 
+Margin="-10"/>
         </StackLayout>
     </Grid>
 </ContentPage>

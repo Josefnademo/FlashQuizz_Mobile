@@ -5,7 +5,6 @@
              x:Class="FlashQuizz.Views.AddCardPage"
              xmlns:views="clr-namespace:FlashQuizz.Views"
              xmlns:ViewModels="clr-namespace:FlashQuizz.ViewModels"
-             Title="{Binding Title}"
              BackgroundColor="{DynamicResource PageBackgroundColor}">
 
 
@@ -66,7 +65,11 @@
                     IsVisible="{Binding IsEditing}"
                     FontSize="20"/>
             <!-- button Home-->
-            <components:GoHomeButton HorizontalOptions="End" VerticalOptions="End" Margin="-10"/>
+            <components:GoHomeButton 
+    HorizontalOptions="End" 
+    VerticalOptions="End" 
+    Margin="-10"/>
+
         </StackLayout>
     </ScrollView>
 </ContentPage>

@@ -81,9 +81,9 @@
                    Style="{DynamicResource PrimaryButtonStyle}"/>
             <!-- button Home-->
             <components:GoHomeButton 
-     HorizontalOptions="End"
-     VerticalOptions="End"
-     Margin="0"/>
+HorizontalOptions="End" 
+VerticalOptions="End" 
+Margin="-10"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>

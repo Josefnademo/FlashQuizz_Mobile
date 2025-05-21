@@ -86,20 +86,6 @@ namespace FlashQuizz.ViewModels
             }
         }
 
-        /// <summary>
-        /// Navigates to the Begining page (MainPage).
-        /// </summary>
-        public async Task GoHomeCommand()
-        {
-            try
-            {
-                //absolute 
-                await Shell.Current.GoToAsync($"///{nameof(MainPage)}");
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Navigation error: {ex.Message}");
-            }
-        }
+       
     }
 }
