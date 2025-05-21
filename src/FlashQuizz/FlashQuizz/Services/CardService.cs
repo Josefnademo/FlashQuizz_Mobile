@@ -46,9 +46,16 @@ namespace FlashQuizz.Services
         /// </summary>
         public void UpdateCard(FlashCard card)
         {
+            var trackedEntity = _dbContext.FlashCards.Local.FirstOrDefault(e => e.Id == card.Id);
+            if (trackedEntity != null)
+            {
+                _dbContext.Entry(trackedEntity).State = EntityState.Detached;
+            }
+
             _dbContext.FlashCards.Update(card);
             _dbContext.SaveChanges();
         }
+
 
         /// <summary>
         /// Deletes a flash card from the database.

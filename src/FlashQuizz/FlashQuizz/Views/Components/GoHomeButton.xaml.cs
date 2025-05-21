@@ -18,7 +18,7 @@ namespace FlashQuizz.Views.Components
         }
 
         /// <summary>
-        /// Navigates to the Begining page (MainPage).
+        /// Navigates to the Begining page (MainPage). abcolute path.
         /// </summary>
         private async Task NavigateHomeAsync()
         {

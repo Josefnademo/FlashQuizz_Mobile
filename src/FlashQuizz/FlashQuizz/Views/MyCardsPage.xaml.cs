@@ -14,6 +14,12 @@ public partial class MyCardsPage : ContentPage
         BindingContext = new MyCardsViewModel(cardService);
     }
 
+    /// <summary>
+    /// Handles the event when a card is selected from the list.
+    /// Executes the EditCardCommand for the selected card.
+    /// </summary>
+    /// <param name="sender">The sender of the event (the collection view).</param>
+    /// <param name="e">The selection changed event arguments.</param>
     private async void OnCardSelected(object sender, SelectionChangedEventArgs e)
     {
         if (e.CurrentSelection.FirstOrDefault() is FlashCard selectedCard)
@@ -23,14 +29,4 @@ public partial class MyCardsPage : ContentPage
                 await vm.EditCardCommand.ExecuteAsync(selectedCard);
         }
     }
-    /*  protected override void OnAppearing()
-      {
-          base.OnAppearing();
-
-          if (BindingContext is MainViewModel viewModel)
-          {
-              viewModel.RefreshCardsCommand.Execute(null);
-          }
-      }*/
-
 }

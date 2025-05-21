@@ -37,8 +37,38 @@
             </summary>
         </member>
         <member name="T:FlashQuizz.ViewModels.CardsViewModelBase">
+            <summary>
+            Base ViewModel for managing flash cards.
+            Provides common logic for loading, adding, and tracking cards.
+            </summary>
             <inheritdoc/>
             <inheritdoc/>
+        </member>
+        <member name="F:FlashQuizz.ViewModels.CardsViewModelBase._cardService">
+            <summary>
+            Service for managing flash cards in the database.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:FlashQuizz.ViewModels.CardsViewModelBase.cards" -->
+        <member name="F:FlashQuizz.ViewModels.CardsViewModelBase.currentCard">
+            <summary>
+            The currently selected or edited flash card.
+            </summary>
+        </member>
+        <member name="M:FlashQuizz.ViewModels.CardsViewModelBase.#ctor(FlashQuizz.Services.CardService)">
+            <summary>
+            Constructor. Initializes the card service and loads cards from the database.
+            </summary>
+        </member>
+        <member name="M:FlashQuizz.ViewModels.CardsViewModelBase.AddCard">
+            <summary>
+            Navigates to the AddCardPage to add a new flash card.
+            </summary>
+        </member>
+        <member name="M:FlashQuizz.ViewModels.CardsViewModelBase.LoadCardsAsync">
+            <summary>
+            Loads all flash cards from the database and updates the Cards collection.
+            </summary>
         </member>
         <member name="P:FlashQuizz.ViewModels.CardsViewModelBase.Cards">
             <inheritdoc cref="F:FlashQuizz.ViewModels.CardsViewModelBase.cards"/>
@@ -89,16 +119,30 @@
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:FlashQuizz.ViewModels.LearningViewModel.DontKnowCard"/>.</summary>
         </member>
         <member name="T:FlashQuizz.ViewModels.MainViewModel">
+            <summary>
+            Main ViewModel for managing flashcards, saving, navigation, and learning mode.
+            </summary>
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
         </member>
+        <member name="M:FlashQuizz.ViewModels.MainViewModel.#ctor(FlashQuizz.Services.CardService)">
+            <summary>
+            Constructor. Initializes the MainViewModel with the card service.
+            </summary>
+        </member>
+        <member name="M:FlashQuizz.ViewModels.MainViewModel.SaveCard">
+            <summary>
+            Saves the current card. Adds a new card if Id is 0, otherwise updates the existing card.
+            Sends a message to update the card list and navigates back to the card list page.
+            </summary>
+        </member>
         <member name="M:FlashQuizz.ViewModels.MainViewModel.StartLearning">
             <summary>
             Starts the learning mode if there are any cards.
-            Passes the card list to the LearningPage.
+            Passes the card list to the LearningPage as a parameter.
             </summary>
         </member>
         <member name="M:FlashQuizz.ViewModels.MainViewModel.Cancel">
@@ -139,17 +183,38 @@
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FlashQuizz.ViewModels.MainViewModel.ViewCards"/>.</summary>
         </member>
         <member name="T:FlashQuizz.ViewModels.MyCardsViewModel">
+            <summary>
+            ViewModel for the "My Cards" page.
+            Handles editing, deleting, and updating cards, and responds to card change messages.
+            </summary>
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
         </member>
+        <member name="M:FlashQuizz.ViewModels.MyCardsViewModel.#ctor(FlashQuizz.Services.CardService)">
+            <summary>
+            Constructor. Registers to receive card change messages.
+            </summary>
+        </member>
+        <member name="M:FlashQuizz.ViewModels.MyCardsViewModel.Receive(FlashQuizz.ViewModels.CardsChangedMessage)">
+            <summary>
+            Handles receiving a CardsChangedMessage and reloads the card list.
+            </summary>
+        </member>
+        <member name="M:FlashQuizz.ViewModels.MyCardsViewModel.EditCard(FlashQuizz.Models.FlashCard)">
+            <summary>
+            Navigates to the edit page for the given card.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:FlashQuizz.ViewModels.MyCardsViewModel.DeleteCard(FlashQuizz.Models.FlashCard)" -->
         <member name="P:FlashQuizz.ViewModels.MyCardsViewModel.SelectedCard">
             <inheritdoc cref="F:FlashQuizz.ViewModels.MyCardsViewModel.selectedCard"/>
         </member>
         <member name="M:FlashQuizz.ViewModels.MyCardsViewModel.OnSelectedCardChanged(FlashQuizz.Models.FlashCard)">
-            <summary>Executes the logic for when <see cref="P:FlashQuizz.ViewModels.MyCardsViewModel.SelectedCard"/> just changed.</summary>
-            <param name="value">The new property value that was set.</param>
-            <remarks>This method is invoked right after the value of <see cref="P:FlashQuizz.ViewModels.MyCardsViewModel.SelectedCard"/> is changed.</remarks>
+            <summary>
+            Handles when the selected card changes.
+            Opens the edit page for the selected card.
+            </summary>
         </member>
         <member name="F:FlashQuizz.ViewModels.MyCardsViewModel.editCardCommand">
             <summary>The backing field for <see cref="P:FlashQuizz.ViewModels.MyCardsViewModel.EditCardCommand"/>.</summary>
@@ -162,6 +227,11 @@
         </member>
         <member name="P:FlashQuizz.ViewModels.MyCardsViewModel.DeleteCardCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:FlashQuizz.ViewModels.MyCardsViewModel.DeleteCard(FlashQuizz.Models.FlashCard)"/>.</summary>
+        </member>
+        <member name="T:FlashQuizz.ViewModels.CardsChangedMessage">
+            <summary>
+            Message for notifying that the card list has changed.
+            </summary>
         </member>
         <member name="T:FlashQuizz.ViewModels.SessionSummaryViewModel">
             <inheritdoc/>
@@ -176,10 +246,32 @@
         <member name="P:FlashQuizz.ViewModels.SessionSummaryViewModel.ReturnToMenuCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FlashQuizz.ViewModels.SessionSummaryViewModel.ReturnToMenu"/>.</summary>
         </member>
+        <member name="M:FlashQuizz.Views.AddCardPage.OnAppearing">
+            <summary>
+            Called when the page appears.
+            Resets the CurrentCard in the ViewModel to a new instance to clear the form.
+            </summary>
+        </member>
         <member name="M:FlashQuizz.Views.Components.GoHomeButton.NavigateHomeAsync">
             <summary>
-            Navigates to the Begining page (MainPage).
+            Navigates to the Begining page (MainPage). abcolute path.
             </summary>
+        </member>
+        <member name="M:FlashQuizz.Views.EditCardPage.ApplyQueryAttributes(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Receives query parameters when navigating to this page.
+            Deserializes the card data from the query and sets it as the current card in the ViewModel.
+            If no card is provided, initializes a new card.
+            </summary>
+            <param name="query">Dictionary of query parameters passed during navigation.</param>
+        </member>
+        <member name="M:FlashQuizz.Views.MyCardsPage.OnCardSelected(System.Object,Microsoft.Maui.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Handles the event when a card is selected from the list.
+            Executes the EditCardCommand for the selected card.
+            </summary>
+            <param name="sender">The sender of the event (the collection view).</param>
+            <param name="e">The selection changed event arguments.</param>
         </member>
         <member name="T:CommunityToolkit.Mvvm.Messaging.__Internals.__IMessengerExtensions">
             <summary>

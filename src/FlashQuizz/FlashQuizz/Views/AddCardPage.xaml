@@ -60,10 +60,9 @@
                     FontSize="20"/>
 
             <Button Text="Annuler" 
-                    Command="{Binding CancelCommand}"
-                    Style="{DynamicResource SecondaryButtonStyle}"
-                    IsVisible="{Binding IsEditing}"
-                    FontSize="20"/>
+         Command="{Binding CancelCommand}"
+         Style="{DynamicResource SecondaryButtonStyle}"
+         FontSize="20"/>
             <!-- button Home-->
             <components:GoHomeButton 
     HorizontalOptions="End" 

@@ -68,6 +68,6 @@
         <components:GoHomeButton 
 HorizontalOptions="End" 
 VerticalOptions="End" 
-Margin="-10"/>
+Margin="10"/>
     </Grid>
 </ContentPage>

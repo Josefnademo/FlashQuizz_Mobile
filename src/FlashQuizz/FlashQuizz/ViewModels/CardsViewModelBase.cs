@@ -12,19 +12,32 @@ using FlashQuizz.Views;
 using System.Diagnostics;
 
 namespace FlashQuizz.ViewModels
-{
+{  /// <summary>
+   /// Base ViewModel for managing flash cards.
+   /// Provides common logic for loading, adding, and tracking cards.
+   /// </summary>
     public abstract partial class CardsViewModelBase : ObservableObject
     {
+        /// <summary>
+        /// Service for managing flash cards in the database.
+        /// </summary>
         protected readonly CardService _cardService;
 
+        /// <summary>
+        /// The collection of flash cards displayed in the UI.
+        /// </summary
         [ObservableProperty]
         private ObservableCollection<FlashCard> cards;
 
-
+        /// <summary>
+        /// The currently selected or edited flash card.
+        /// </summary>
         [ObservableProperty]
         private FlashCard currentCard;
 
-
+        /// <summary>
+        /// Constructor. Initializes the card service and loads cards from the database.
+        /// </summary>
         public CardsViewModelBase(CardService cardService)
         {
             CurrentCard = new FlashCard();
@@ -32,7 +45,9 @@ namespace FlashQuizz.ViewModels
             LoadCardsAsync();
         }
 
-
+        /// <summary>
+        /// Navigates to the AddCardPage to add a new flash card.
+        /// </summary>
         [RelayCommand]
         private async Task AddCard()
         {
@@ -41,7 +56,9 @@ namespace FlashQuizz.ViewModels
 
         }
 
-
+        /// <summary>
+        /// Loads all flash cards from the database and updates the Cards collection.
+        /// </summary>
         protected async Task LoadCardsAsync()
         {
             var cardsFromDb = await _cardService.GetAllCardsAsync();

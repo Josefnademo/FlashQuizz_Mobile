@@ -1070,6 +1070,7 @@ C:\Users\hdjdj\Documents\GitHub\FlashQuizz_Mobile\src\FlashQuizz\FlashQuizz\obj\
 C:\Users\hdjdj\Documents\GitHub\FlashQuizz_Mobile\src\FlashQuizz\FlashQuizz\obj\Debug\net8.0-android\stamp\_GenerateJavaStubs.stamp
 C:\Users\hdjdj\Documents\GitHub\FlashQuizz_Mobile\src\FlashQuizz\FlashQuizz\obj\Debug\net8.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\hdjdj\Documents\GitHub\FlashQuizz_Mobile\src\FlashQuizz\FlashQuizz\obj\Debug\net8.0-android\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\vpirk\OneDrive\Documents\GitHub\FlashQuizz_Mobile\src\FlashQuizz\FlashQuizz\obj\Debug\net8.0-android\app_shared_libraries\x86_64\libxamarin-app.so
 C:\Users\vpirk\OneDrive\Documents\GitHub\FlashQuizz_Mobile\src\FlashQuizz\FlashQuizz\bin\Debug\net8.0-android\FlashQuizz.runtimeconfig.json
 C:\Users\vpirk\OneDrive\Documents\GitHub\FlashQuizz_Mobile\src\FlashQuizz\FlashQuizz\bin\Debug\net8.0-android\FlashQuizz.dll
 C:\Users\vpirk\OneDrive\Documents\GitHub\FlashQuizz_Mobile\src\FlashQuizz\FlashQuizz\bin\Debug\net8.0-android\FlashQuizz.pdb
@@ -2133,7 +2134,6 @@ C:\Users\vpirk\OneDrive\Documents\GitHub\FlashQuizz_Mobile\src\FlashQuizz\FlashQ
 C:\Users\vpirk\OneDrive\Documents\GitHub\FlashQuizz_Mobile\src\FlashQuizz\FlashQuizz\obj\Debug\net8.0-android\android\compressed_assemblies.x86_64.o
 C:\Users\vpirk\OneDrive\Documents\GitHub\FlashQuizz_Mobile\src\FlashQuizz\FlashQuizz\obj\Debug\net8.0-android\android\marshal_methods.x86_64.o
 C:\Users\vpirk\OneDrive\Documents\GitHub\FlashQuizz_Mobile\src\FlashQuizz\FlashQuizz\obj\Debug\net8.0-android\android\jni_remap.x86_64.o
-C:\Users\vpirk\OneDrive\Documents\GitHub\FlashQuizz_Mobile\src\FlashQuizz\FlashQuizz\obj\Debug\net8.0-android\app_shared_libraries\x86_64\libxamarin-app.so
 C:\Users\vpirk\OneDrive\Documents\GitHub\FlashQuizz_Mobile\src\FlashQuizz\FlashQuizz\obj\Debug\net8.0-android\android\bin\classes.dex
 C:\Users\vpirk\OneDrive\Documents\GitHub\FlashQuizz_Mobile\src\FlashQuizz\FlashQuizz\obj\Debug\net8.0-android\android\bin\classes2.dex
 C:\Users\vpirk\OneDrive\Documents\GitHub\FlashQuizz_Mobile\src\FlashQuizz\FlashQuizz\obj\Debug\net8.0-android\stamp\_CleanIntermediateIfNeeded.stamp

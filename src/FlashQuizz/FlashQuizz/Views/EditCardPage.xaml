@@ -71,7 +71,6 @@
             <Button Text="Annuler" 
                     Command="{Binding CancelCommand}"
                     Style="{DynamicResource SecondaryButtonStyle}"
-                    IsVisible="{Binding IsEditing}"
                     FontSize="20"/>
             <!-- button Home-->
             <components:GoHomeButton 
