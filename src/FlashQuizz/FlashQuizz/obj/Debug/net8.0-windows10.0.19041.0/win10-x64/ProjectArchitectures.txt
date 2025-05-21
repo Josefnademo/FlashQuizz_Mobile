@@ -1,1 +1,1 @@
-C:\Users\hdjdj\Documents\GitHub\FlashQuizz_Mobile\src\FlashQuizz\FlashQuizz\FlashQuizz.csproj;x64
+C:\Users\vpirk\OneDrive\Documents\GitHub\FlashQuizz_Mobile\src\FlashQuizz\FlashQuizz\FlashQuizz.csproj;x64

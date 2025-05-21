@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:FlashQuizz.Views"
     xmlns:ViewModels="clr-namespace:FlashQuizz.ViewModels"
-    xmlns:local="clr-namespace:FlashQuizz"
+    xmlns:local="clr-namespace:FlashQuizz.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="FlashQuizz">
 

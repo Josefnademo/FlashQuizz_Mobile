@@ -8,10 +8,10 @@
              Title="Apprentissage"
              BackgroundColor="{StaticResource PageBackground}">
 
-    <!-- Корневая сетка с перекрытием элементов -->
+
     <Grid>
 
-        <!-- Основной контент страницы с нижним отступом под кнопку -->
+
         <Grid RowDefinitions="*,Auto,Auto" Padding="20" Margin="0,0,0,80">
 
             <!-- Flashcard -->
@@ -64,10 +64,7 @@
             </StackLayout>
         </Grid>
 
-        <!-- button Home-->
-        <components:GoHomeButton 
-            HorizontalOptions="End"
-            VerticalOptions="End"
-            Margin="0"/>
+        <!-- Button Home-->
+        <components:GoHomeButton HorizontalOptions="End" VerticalOptions="End" Margin="10"/>
     </Grid>
 </ContentPage>

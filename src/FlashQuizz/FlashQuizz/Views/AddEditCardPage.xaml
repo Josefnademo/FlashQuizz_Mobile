@@ -66,10 +66,7 @@
                     IsVisible="{Binding IsEditing}"
                     FontSize="20"/>
             <!-- button Home-->
-            <components:GoHomeButton 
-     HorizontalOptions="End"
-     VerticalOptions="End"
-     Margin="0"/>
+            <components:GoHomeButton HorizontalOptions="End" VerticalOptions="End" Margin="-10"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>

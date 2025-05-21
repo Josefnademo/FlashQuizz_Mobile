@@ -11,5 +11,5 @@
         Command="{Binding GoHomeCommand}"
         HorizontalOptions="End"
         VerticalOptions="Start"
-        Margin="10"/>
+         Margin="10,-5"/>
 </ContentView>

@@ -3,12 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FlashQuizz.Views.MyCardsPage"
              xmlns:components="clr-namespace:FlashQuizz.Views.Components"
-             xmlns:views="clr-namespace:FlashQuizz.Views"
-             xmlns:ViewModels="clr-namespace:FlashQuizz.ViewModels"
-             Title="My Cards"
+             x:Name="CardsPage"
+             Title="Mes cartes"
              BackgroundColor="{DynamicResource PageBackgroundColor}">
-
-
 
     <Grid RowDefinitions="Auto,*,Auto" Padding="20">
         <!-- Header -->
@@ -24,48 +21,33 @@
                      Command="{Binding RefreshCardsCommand}"
                      IsRefreshing="{Binding IsRefreshing}">
             <CollectionView ItemsSource="{Binding Cards}" 
-                            SelectionMode="None"
+                            SelectionMode="Single" 
+                            SelectedItem="{Binding SelectedCard, Mode=TwoWay}"
                             EmptyView="No cards available. Add your first card!">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame Padding="15" 
-                               Margin="0,5" 
-                               BackgroundColor="{DynamicResource CardBackgroundColor}"
-                               BorderColor="{DynamicResource CardBorderColor}">
-                            <Grid ColumnDefinitions="*,Auto">
-                                <Label Text="{Binding Question}" 
-                                       FontSize="16"
-                                       TextColor="{DynamicResource PrimaryTextColor}"
-                                       LineBreakMode="WordWrap"
-                                       Grid.Column="0"/>
-                                <Button Text="⋮" 
-                                        Command="{Binding Source={RelativeSource AncestorType={x:Type ViewModels:MainViewModel}}, Path=EditCardCommand}"
-                                        CommandParameter="{Binding .}"
-                                        BackgroundColor="Transparent"
-                                        TextColor="{DynamicResource PrimaryTextColor}"
-                                        Grid.Column="1"/>
-                            </Grid>
+                        <Frame Margin="10" Padding="10" BorderColor="Gray" CornerRadius="10">
+                            <StackLayout>
+                                <Label Text="{Binding Question}" FontAttributes="Bold" FontSize="20"/>
+                                <Label Text="{Binding Answer}" FontSize="16" TextColor="Gray"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Spacing="10">
+                                    <Button BackgroundColor="Red" Text="Supprimer" Command="{Binding BindingContext.DeleteCardCommand, Source={x:Reference Name=CardsPage}}" CommandParameter="{Binding .}" />
+                                    <Button BackgroundColor="Blue" Text="Éditer" Command="{Binding BindingContext.EditCardCommand, Source={x:Reference Name=CardsPage}}" CommandParameter="{Binding .}" />
+                                </StackLayout>
+                            </StackLayout>
                         </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </RefreshView>
 
-        <!-- Footer Buttons -->
+        <!-- Footer Button -->
         <StackLayout Grid.Row="2" Spacing="15">
             <Button Text="Add a Card" 
                     Command="{Binding AddCardCommand}"
                     Style="{DynamicResource PrimaryButtonStyle}"/>
-
-            <Button Text="Start Learning" 
-                    Command="{Binding StartLearningCommand}"
-                    Style="{DynamicResource PrimaryButtonStyle}"
-                    IsEnabled="{Binding HasCards}"/>
-            <!-- button Home-->
-            <components:GoHomeButton 
-     HorizontalOptions="End"
-     VerticalOptions="End"
-     Margin="0"/>
+            <components:GoHomeButton HorizontalOptions="End" VerticalOptions="End" Margin="-10"/>
         </StackLayout>
     </Grid>
 </ContentPage>
+        
