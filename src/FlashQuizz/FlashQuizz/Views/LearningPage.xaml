@@ -12,56 +12,60 @@
     <Grid>
 
 
-        <Grid RowDefinitions="*,Auto,Auto" Padding="20" Margin="0,0,0,80" BackgroundColor="#121212" >
+        <Grid RowDefinitions="*,Auto,Auto" Padding="20" Margin="0,300,0,100" BackgroundColor="#121212" >
+
+            <!-- Stop Button -->
+            <Button Grid.Row="0"
+                Text="Stop" 
+                Margin="30,0,30,0"
+                Command="{Binding StopSessionCommand}"
+                Style="{StaticResource DangerButton}"/>
+
 
             <!-- Flashcard -->
-            <Frame Grid.Row="0"
-                   BackgroundColor="{StaticResource CardBackground}"
-                   BorderColor="{StaticResource Primary}"
-                   CornerRadius="15"
-                   Padding="20"
-                   VerticalOptions="Center">
+            <Frame Grid.Row="1"
+               BackgroundColor="{StaticResource CardBackground}"
+               BorderColor="{StaticResource Primary}"
+               CornerRadius="15"
+               Padding="20"
+               Margin="0,150,0,100"
+               VerticalOptions="Center">
 
-                <StackLayout>
-                    <Button Text="Stop" 
-                            Command="{Binding DontKnowCardCommand}"
-                            Style="{StaticResource DangerButton}"/>
-
-                    <Label Text="{Binding CurrentCard.Question, StringFormat='Q: {0}'}" 
-                           IsVisible="{Binding IsQuestionShowing}"
-                           FontSize="20"
-                           TextColor="{StaticResource PrimaryText}"/>
-
-                    <Label Text="{Binding CurrentCard.Answer, StringFormat='A: {0}'}" 
-                           IsVisible="{Binding !IsQuestionShowing}"
-                           FontSize="20"
-                           TextColor="{StaticResource PrimaryText}"/>
-                </StackLayout>
+                <VerticalStackLayout Spacing="20">
+                    <Label Text="{Binding DisplayedText}" FontSize="24" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ShowAnswerCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </VerticalStackLayout>
             </Frame>
 
             <!-- Progress -->
-            <Label Grid.Row="1"
-                   Text="{Binding ProgressText}"
-                   FontSize="14"
-                   TextColor="{StaticResource SecondaryText}"
-                   HorizontalOptions="Center"/>
+            <Label Grid.Row="2"
+               Text="{Binding ProgressText}"
+               FontSize="14"
+               TextColor="{StaticResource SecondaryText}"
+               HorizontalOptions="Center"/>
 
             <!-- Actions -->
-            <StackLayout Grid.Row="2" Spacing="15">
-                <Button Text="Voir la réponse" 
-                        Command="{Binding ShowAnswerCommand}"
-                        IsVisible="{Binding IsQuestionShowing}"
-                        Style="{StaticResource PrimaryButton}"/>
+            <StackLayout Grid.Row="3" Spacing="15" Margin="60,80,60,20">
+                <!-- <Button Text="Voir la réponse" 
+                    Command="{Binding ShowAnswerCommand}"
+                    IsVisible="{Binding IsQuestionShowing}"
+                    Style="{StaticResource PrimaryButton}"/>-->
+                
+                <Button Text="Je connais" 
+                        Command="{Binding KnowCardCommand}"
+                         Style="{StaticResource SuccessButton}"/>
 
                 <StackLayout Orientation="Horizontal" 
-                             Spacing="15"
-                             HorizontalOptions="Center"
-                             IsVisible="{Binding !IsQuestionShowing}">
-                    <Button Text="Je connais" 
-                            Command="{Binding KnowCardCommand}"
-                            Style="{StaticResource SuccessButton}"/>
+                         Spacing="15"
+                         HorizontalOptions="Center"
+                         IsVisible="{Binding IsAnswerShown}">
+                   
                 </StackLayout>
             </StackLayout>
+
         </Grid>
 
         <!-- button Home-->

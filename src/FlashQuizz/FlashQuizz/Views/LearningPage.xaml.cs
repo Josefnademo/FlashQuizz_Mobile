@@ -1,20 +1,61 @@
-using Microsoft.Maui.Devices.Sensors;
+﻿using Microsoft.Maui.Devices.Sensors;
 using FlashQuizz.ViewModels;
+using System.Text.Json;
+using FlashQuizz.Models;
+
 
 namespace FlashQuizz.Views
 {
     public partial class LearningPage : ContentPage
     {
+        private LearningViewModel _viewModel;
+
         public LearningPage()
         {
             InitializeComponent();
+            _viewModel = new LearningViewModel();
+            BindingContext = _viewModel;
+
+            Accelerometer.ShakeDetected += Accelerometer_ShakeDetected;
+            Accelerometer.Start(SensorSpeed.UI);
         }
 
-        protected override void OnAppearing()
+        private async void Accelerometer_ShakeDetected(object sender, EventArgs e)
         {
-            base.OnAppearing();
-            Accelerometer.ShakeDetected += OnShakeDetected;
-            Accelerometer.Start(SensorSpeed.UI);
+            await _viewModel.OnShakeDetected();
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            Accelerometer.ShakeDetected -= Accelerometer_ShakeDetected;
+            Accelerometer.Stop();
+        }
+    }
+
+
+}
+/* private void InitializeViewModelFromNavigation()
+        {
+            if (BindingContext is LearningViewModel vm)
+            {
+                var navUri = Shell.Current.CurrentState.Location.OriginalString;
+                if (NavigationUtil.TryGetParameter(navUri, "Cards", out List<FlashCard> cards))
+                {
+                    vm.Initialize(cards);
+                }
+            }
+        }
+
+        private void OnShakeDetected(object sender, EventArgs e)
+        {
+            if (BindingContext is LearningViewModel vm && vm.IsAnswerShown)
+            {
+                if (vm.DontKnowCardCommand.CanExecute(null))
+                {
+                    MainThread.BeginInvokeOnMainThread(() => vm.DontKnowCardCommand.Execute(null));
+                }
+            }
         }
 
         protected override void OnDisappearing()
@@ -22,17 +63,4 @@ namespace FlashQuizz.Views
             Accelerometer.ShakeDetected -= OnShakeDetected;
             Accelerometer.Stop();
             base.OnDisappearing();
-        }
-
-        private void OnShakeDetected(object sender, EventArgs e)
-        {
-            if (BindingContext is LearningViewModel viewModel && !viewModel.IsQuestionShowing)
-            {
-                MainThread.BeginInvokeOnMainThread(() =>
-                {
-                    viewModel.DontKnowCardCommand.Execute(null);
-                });
-            }
-        }
-    }
-}
+        }*/

@@ -1,4 +1,5 @@
 namespace FlashQuizz.Views;
+using FlashQuizz.Models;
 using FlashQuizz.ViewModels;
 public partial class SessionSummaryPage : ContentPage
 {
@@ -7,4 +8,4 @@ public partial class SessionSummaryPage : ContentPage
         InitializeComponent();
         BindingContext = viewModel;
     }
-}
+} 

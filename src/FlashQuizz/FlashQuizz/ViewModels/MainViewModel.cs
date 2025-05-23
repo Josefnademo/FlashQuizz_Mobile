@@ -61,16 +61,22 @@ namespace FlashQuizz.ViewModels
         [RelayCommand]
         private async Task StartLearning()
         {
-            if (Cards?.Any() == true)
-            {
-                var cardsParam = Uri.EscapeDataString(JsonSerializer.Serialize(Cards.ToList()));
-                await Shell.Current.GoToAsync($"{nameof(LearningPage)}?Cards={cardsParam}");
-            }
-            else
+            await LoadCardsAsync();
+
+            if (Cards == null || !Cards.Any())
             {
                 await Application.Current.MainPage.DisplayAlert("Attention", "Aucune carte disponible", "OK");
+                return;
             }
+
+            var navParam = new Dictionary<string, object>
+    {
+        { "Cards", Cards.ToList() }
+    };
+
+            await Shell.Current.GoToAsync(nameof(LearningPage), navParam);
         }
+
 
         /// <summary>
         /// Navigates back to the previous page.
@@ -78,15 +84,8 @@ namespace FlashQuizz.ViewModels
         [RelayCommand]
         public async Task Cancel()
         {
-            try
-            {
-                await Application.Current.MainPage.DisplayAlert("Info", "CancelCommand executed : ", "OK");
-                await Shell.Current.GoToAsync("..");
-            }
-            catch (Exception ex)
-            {
-                await Application.Current.MainPage.DisplayAlert("Error", $"FailedCancelCommand: {ex.Message}", "OK");
-            }
+            Console.WriteLine("Cancel executed");
+            await Shell.Current.GoToAsync("..");
         }
 
 

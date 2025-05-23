@@ -1,40 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FlashQuizz.Models;
-using FlashQuizz.Services;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using System.Collections.ObjectModel;
-using System.Text.Json;
+﻿using System.ComponentModel;
+using System.Windows.Input;
+using Microsoft.Maui.Controls;
+using System;
 
 namespace FlashQuizz.ViewModels
 {
-    public partial class SessionSummaryViewModel : ObservableObject
+    public class SessionSummaryViewModel : INotifyPropertyChanged
     {
-        [ObservableProperty]
-        private SessionStats _sessionStats;
+        public int TotalItems { get; }
+        public int ItemsCompleted { get; }
+        public TimeSpan SessionDuration { get; }
 
-        public string TimeSpent => SessionStats?.TimeSpent ?? "00:00:00";
-        public string HardestCard => SessionStats?.HardestCard?.Question ?? "N/A";
-        public int PerfectCardsCount => SessionStats?.PerfectCardsCount ?? 0;
-        public double MemorizationPercentage => SessionStats?.MemorizationPercentage ?? 0;
+        public string SummaryText => $"Vous avez appris {ItemsCompleted} sur {TotalItems} items.";
+        public string DurationText => $"Durée de la session : {SessionDuration.Minutes} min {SessionDuration.Seconds} s";
 
-        public SessionSummaryViewModel()
+        public ICommand BackToHomeCommand { get; }
+
+        public SessionSummaryViewModel(int totalItems, int itemsCompleted, TimeSpan sessionDuration)
         {
-            if (Shell.Current.CurrentState.Location.OriginalString.Contains("SessionStats"))
+            TotalItems = totalItems;
+            ItemsCompleted = itemsCompleted;
+            SessionDuration = sessionDuration;
+
+            BackToHomeCommand = new Command(async () =>
             {
-                var statsParam = Shell.Current.CurrentState.Location.OriginalString.Split('=')[1];
-                SessionStats = JsonSerializer.Deserialize<SessionStats>(Uri.UnescapeDataString(statsParam));
-            }
+                await Application.Current.MainPage.Navigation.PopToRootAsync();
+            });
         }
 
-        [RelayCommand]
-        private async Task ReturnToMenu()
-        {
-            await Shell.Current.GoToAsync("..");
-        }
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

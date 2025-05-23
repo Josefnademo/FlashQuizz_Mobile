@@ -59,10 +59,12 @@
                     Style="{DynamicResource PrimaryButtonStyle}"
                     FontSize="20"/>
 
+            <!-- button Cancel-->
             <Button Text="Annuler" 
          Command="{Binding CancelCommand}"
          Style="{DynamicResource SecondaryButtonStyle}"
          FontSize="20"/>
+            
             <!-- button Home-->
             <components:GoHomeButton 
     HorizontalOptions="End" 

@@ -88,35 +88,35 @@
             <inheritdoc/>
             <inheritdoc/>
         </member>
-        <member name="P:FlashQuizz.ViewModels.LearningViewModel.Cards">
-            <inheritdoc cref="F:FlashQuizz.ViewModels.LearningViewModel._cards"/>
-        </member>
         <member name="P:FlashQuizz.ViewModels.LearningViewModel.CurrentCard">
-            <inheritdoc cref="F:FlashQuizz.ViewModels.LearningViewModel._currentCard"/>
+            <inheritdoc cref="F:FlashQuizz.ViewModels.LearningViewModel.currentCard"/>
         </member>
-        <member name="P:FlashQuizz.ViewModels.LearningViewModel.IsQuestionShowing">
-            <inheritdoc cref="F:FlashQuizz.ViewModels.LearningViewModel._isQuestionShowing"/>
+        <member name="P:FlashQuizz.ViewModels.LearningViewModel.DisplayedText">
+            <inheritdoc cref="F:FlashQuizz.ViewModels.LearningViewModel.displayedText"/>
+        </member>
+        <member name="P:FlashQuizz.ViewModels.LearningViewModel.IsAnswerShown">
+            <inheritdoc cref="F:FlashQuizz.ViewModels.LearningViewModel.isAnswerShown"/>
         </member>
         <member name="P:FlashQuizz.ViewModels.LearningViewModel.ProgressText">
-            <inheritdoc cref="F:FlashQuizz.ViewModels.LearningViewModel._progressText"/>
+            <inheritdoc cref="F:FlashQuizz.ViewModels.LearningViewModel.progressText"/>
         </member>
         <member name="F:FlashQuizz.ViewModels.LearningViewModel.showAnswerCommand">
             <summary>The backing field for <see cref="P:FlashQuizz.ViewModels.LearningViewModel.ShowAnswerCommand"/>.</summary>
         </member>
         <member name="P:FlashQuizz.ViewModels.LearningViewModel.ShowAnswerCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:FlashQuizz.ViewModels.LearningViewModel.ShowAnswer"/>.</summary>
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FlashQuizz.ViewModels.LearningViewModel.ShowAnswer"/>.</summary>
         </member>
         <member name="F:FlashQuizz.ViewModels.LearningViewModel.knowCardCommand">
             <summary>The backing field for <see cref="P:FlashQuizz.ViewModels.LearningViewModel.KnowCardCommand"/>.</summary>
         </member>
         <member name="P:FlashQuizz.ViewModels.LearningViewModel.KnowCardCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:FlashQuizz.ViewModels.LearningViewModel.KnowCard"/>.</summary>
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FlashQuizz.ViewModels.LearningViewModel.KnowCard"/>.</summary>
         </member>
-        <member name="F:FlashQuizz.ViewModels.LearningViewModel.dontKnowCardCommand">
-            <summary>The backing field for <see cref="P:FlashQuizz.ViewModels.LearningViewModel.DontKnowCardCommand"/>.</summary>
+        <member name="F:FlashQuizz.ViewModels.LearningViewModel.stopSessionCommand">
+            <summary>The backing field for <see cref="P:FlashQuizz.ViewModels.LearningViewModel.StopSessionCommand"/>.</summary>
         </member>
-        <member name="P:FlashQuizz.ViewModels.LearningViewModel.DontKnowCardCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:FlashQuizz.ViewModels.LearningViewModel.DontKnowCard"/>.</summary>
+        <member name="P:FlashQuizz.ViewModels.LearningViewModel.StopSessionCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FlashQuizz.ViewModels.LearningViewModel.StopSession"/>.</summary>
         </member>
         <member name="T:FlashQuizz.ViewModels.MainViewModel">
             <summary>
@@ -233,19 +233,6 @@
             Message for notifying that the card list has changed.
             </summary>
         </member>
-        <member name="T:FlashQuizz.ViewModels.SessionSummaryViewModel">
-            <inheritdoc/>
-            <inheritdoc/>
-        </member>
-        <member name="P:FlashQuizz.ViewModels.SessionSummaryViewModel.SessionStats">
-            <inheritdoc cref="F:FlashQuizz.ViewModels.SessionSummaryViewModel._sessionStats"/>
-        </member>
-        <member name="F:FlashQuizz.ViewModels.SessionSummaryViewModel.returnToMenuCommand">
-            <summary>The backing field for <see cref="P:FlashQuizz.ViewModels.SessionSummaryViewModel.ReturnToMenuCommand"/>.</summary>
-        </member>
-        <member name="P:FlashQuizz.ViewModels.SessionSummaryViewModel.ReturnToMenuCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FlashQuizz.ViewModels.SessionSummaryViewModel.ReturnToMenu"/>.</summary>
-        </member>
         <member name="M:FlashQuizz.Views.AddCardPage.OnAppearing">
             <summary>
             Called when the page appears.
@@ -306,17 +293,17 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentCard">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentCard" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsQuestionShowing">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsQuestionShowing" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DisplayedText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DisplayedText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsAnswerShown">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsAnswerShown" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ProgressText">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ProgressText" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedCard">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedCard" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SessionStats">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SessionStats" generated properties.</summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
@@ -330,17 +317,17 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentCard">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentCard" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsQuestionShowing">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsQuestionShowing" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DisplayedText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DisplayedText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsAnswerShown">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsAnswerShown" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ProgressText">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ProgressText" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedCard">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedCard" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SessionStats">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SessionStats" generated properties.</summary>
         </member>
     </members>
 </doc>
