@@ -5,10 +5,13 @@ namespace FlashQuizz.Views;
 
 public partial class EditCardPage : ContentPage, IQueryAttributable
 {
+    private readonly MainViewModel _viewModel;
+
     public EditCardPage(MainViewModel viewModel)
     {
         InitializeComponent();
-        BindingContext = viewModel;
+        _viewModel = viewModel;
+        BindingContext = _viewModel;
     }
 
     /// <summary>
@@ -19,23 +22,20 @@ public partial class EditCardPage : ContentPage, IQueryAttributable
     /// <param name="query">Dictionary of query parameters passed during navigation.</param>
     public void ApplyQueryAttributes(IDictionary<string, object> query)
     {
-        if (BindingContext is MainViewModel vm)
+        if (query.TryGetValue("CardToEdit", out var cardJsonObj) && cardJsonObj is string cardJson)
         {
-            if (query.TryGetValue("CardToEdit", out var cardJsonObj) && cardJsonObj is string cardJson)
+            var decoded = Uri.UnescapeDataString(cardJson);
+            //Deserialize is a process in programming where data in a specific format (usually a string,
+            //such as JSON or XML) is converted back into an object or data structure in your code.
+            var card = System.Text.Json.JsonSerializer.Deserialize<FlashCard>(decoded);
+            if (card != null)
             {
-                var decoded = Uri.UnescapeDataString(cardJson);
-                //Deserialize is a process in programming where data in a specific format (usually a string,
-                //such as JSON or XML) is converted back into an object or data structure in your code.
-                var card = System.Text.Json.JsonSerializer.Deserialize<FlashCard>(decoded);
-                if (card != null)
-                {
-                    vm.CurrentCard = card;
-                }
+                _viewModel.CurrentCard = card;
             }
-            else
-            {
-                vm.CurrentCard = new FlashCard();
-            }
+        }
+        else
+        {
+            _viewModel.CurrentCard = new FlashCard();
         }
     }
 }

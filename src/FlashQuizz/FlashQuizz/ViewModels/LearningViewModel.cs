@@ -42,7 +42,7 @@ namespace FlashQuizz.ViewModels
             _remainingCards = new List<FlashCard>(_allCards);
             ShowNextCard();
             UpdateProgress();
-        }
+            }
 
         private void ShowNextCard()
         {
@@ -72,7 +72,7 @@ namespace FlashQuizz.ViewModels
             if (CurrentCard == null) return;
 
             IsAnswerShown = true;
-            
+
             // When showing the answer, count it as "don't know"
             CurrentCard.TimesShown++;
             await _cardService.UpdateCardAsync(CurrentCard);
@@ -113,13 +113,13 @@ namespace FlashQuizz.ViewModels
         private async Task StopSession()
         {
             _sessionStats.EndTime = DateTime.Now;
-            
+
             // Navigate to summary page with session stats
             var navigationParameter = new Dictionary<string, object>
             {
                 { "SessionStats", _sessionStats }
             };
-            
+
             await Shell.Current.GoToAsync(nameof(SessionSummaryPage), navigationParameter);
         }
 

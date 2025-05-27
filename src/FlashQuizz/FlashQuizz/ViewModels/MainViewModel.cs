@@ -51,9 +51,6 @@ namespace FlashQuizz.ViewModels
             }
         }
 
-
-
-
         /// <summary>
         /// Starts the learning mode if there are any cards.
         /// Passes the card list to the LearningPage as a parameter.
@@ -70,13 +67,12 @@ namespace FlashQuizz.ViewModels
             }
 
             var navParam = new Dictionary<string, object>
-    {
-        { "Cards", Cards.ToList() }
-    };
+            {
+                { "Cards", Cards.ToList() }
+            };
 
             await Shell.Current.GoToAsync(nameof(LearningPage), navParam);
         }
-
 
         /// <summary>
         /// Navigates back to the previous page.
@@ -84,10 +80,25 @@ namespace FlashQuizz.ViewModels
         [RelayCommand]
         public async Task Cancel()
         {
-            Console.WriteLine("Cancel executed");
-            await Shell.Current.GoToAsync("..");
+            try
+            {
+                await Shell.Current.GoToAsync($"///{nameof(MyCardsPage)}");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Cancel navigation error: {ex.Message}");
+                // Fallback navigation if the above fails
+                try
+                {
+                    await Shell.Current.GoToAsync("..");
+                }
+                catch (Exception fallbackEx)
+                {
+                    Debug.WriteLine($"Fallback navigation error: {fallbackEx.Message}");
+                    await Application.Current.MainPage.DisplayAlert("Error", "Failed to navigate back", "OK");
+                }
+            }
         }
-
 
         /// <summary>
         /// Navigates to the page displaying all flashcards (MyCardsPage).
@@ -106,7 +117,5 @@ namespace FlashQuizz.ViewModels
                 await Application.Current.MainPage.DisplayAlert("Error", "Failed to navigate", "OK");
             }
         }
-
-       
     }
 }

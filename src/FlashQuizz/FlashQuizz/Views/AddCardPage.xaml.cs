@@ -6,10 +6,13 @@ namespace FlashQuizz.Views;
 
 public partial class AddCardPage : ContentPage
 {
+	private readonly MainViewModel _viewModel;
+
 	public AddCardPage(MainViewModel viewModel)
     {
         InitializeComponent();
-        BindingContext = viewModel;
+        _viewModel = viewModel;
+        BindingContext = _viewModel;
     }
     /// <summary>
     /// Called when the page appears.
@@ -18,12 +21,7 @@ public partial class AddCardPage : ContentPage
     protected override void OnAppearing()
     {
         base.OnAppearing();
-
-        if (BindingContext is MainViewModel vm)
-        {
-            // IMPORTANT: create a new instance so the form is empty
-            vm.CurrentCard = new FlashCard();
-        }
+        _viewModel.CurrentCard = new FlashCard();
     }
 
 }

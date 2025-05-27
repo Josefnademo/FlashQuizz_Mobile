@@ -70,9 +70,11 @@
 
             <!-- button Cancel-->
             <Button Text="Annuler" 
-Command="{Binding CancelCommand}"
-Style="{DynamicResource SecondaryButtonStyle}"
-FontSize="20"/>
+                    Command="{Binding CancelCommand}"
+                    Style="{DynamicResource SecondaryButtonStyle}"
+                    FontSize="20"
+                    Margin="0,10,0,0"
+                    HorizontalOptions="Fill"/>
             
             <!-- button Home-->
             <components:GoHomeButton 

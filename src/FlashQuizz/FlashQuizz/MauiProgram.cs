@@ -36,6 +36,7 @@ namespace FlashQuizz
             builder.Services.AddTransient<MainViewModel>();
             builder.Services.AddTransient<LearningViewModel>();
             builder.Services.AddTransient<SessionSummaryViewModel>();
+            builder.Services.AddTransient<MyCardsViewModel>();
             return builder;
         }
 
