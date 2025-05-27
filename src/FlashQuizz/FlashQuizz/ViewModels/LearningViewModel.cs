@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using FlashQuizz.Models;
-using FlashQuizz.Views;
+using FlashQuizz.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,13 +9,15 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-
 namespace FlashQuizz.ViewModels
 {
     public partial class LearningViewModel : ObservableObject
     {
-        private List<FlashCard> _cards = new List<FlashCard>();
-        private int _currentIndex = 0;
+        private readonly CardService _cardService;
+        private List<FlashCard> _allCards;
+        private List<FlashCard> _remainingCards;
+        private SessionStats _sessionStats;
+        private Random _random = new Random();
 
         [ObservableProperty]
         private FlashCard currentCard;
@@ -24,134 +26,105 @@ namespace FlashQuizz.ViewModels
         private string displayedText;
 
         [ObservableProperty]
-        private bool isAnswerShown = false;
+        private bool isAnswerShown;
 
         [ObservableProperty]
         private string progressText;
 
-        private SessionStats _sessionStats = new SessionStats();
-
-        // Инициализация карт
-        public void Initialize(List<FlashCard> cards)
+        public LearningViewModel(CardService cardService)
         {
-            _cards = cards ?? new List<FlashCard>();
-            _currentIndex = 0;
+            _cardService = cardService;
+            _sessionStats = new SessionStats { StartTime = DateTime.Now };
+            Initialize();
+        }
 
-            if (_cards.Any())
+        private async void Initialize()
+        {
+            _allCards = await _cardService.GetAllCardsAsync();
+            _remainingCards = new List<FlashCard>(_allCards);
+            ShowNextCard();
+            UpdateProgress();
+        }
+
+        private void ShowNextCard()
+        {
+            if (_remainingCards.Count == 0)
             {
-                SetCurrentCard(_cards[_currentIndex]);
+                EndSession();
+                return;
             }
-            else
+
+            int index = _random.Next(_remainingCards.Count);
+            CurrentCard = _remainingCards[index];
+            DisplayedText = CurrentCard.Question;
+            IsAnswerShown = false;
+            UpdateProgress();
+        }
+
+        private void UpdateProgress()
+        {
+            int total = _allCards.Count;
+            int remaining = _remainingCards.Count;
+            int completed = total - remaining;
+            ProgressText = $"Progression: {completed}/{total}";
+        }
+
+        [RelayCommand]
+        private void ShowAnswer()
+        {
+            if (CurrentCard != null)
             {
-                displayedText = "Нет доступных карт";
-                currentCard = null;
-                progressText = string.Empty;
+                DisplayedText = CurrentCard.Answer;
+                IsAnswerShown = true;
             }
         }
 
-        private void SetCurrentCard(FlashCard card)
-        {
-            currentCard = card;
-            displayedText = card.Question;
-            isAnswerShown = false;
-            UpdateProgressText();
-        }
-
-        // При тапе на карту показываем ответ и сразу считаем как "не знаю"
         [RelayCommand]
-        public async Task ShowAnswer()
+        private async Task KnowCard()
         {
-            if (currentCard == null || isAnswerShown)
-                return;
+            if (CurrentCard == null) return;
 
-            displayedText = currentCard.Answer;
-            isAnswerShown = true;
+            CurrentCard.TimesShown++;
+            CurrentCard.TimesCorrect++;
+            await _cardService.UpdateCardAsync(CurrentCard);
 
-            // Подождать секунду, чтобы пользователь увидел ответ
-            await Task.Delay(1000);
-
-            // Считаем карту "не знаю" и идём дальше
-            await DontKnowCard();
+            _sessionStats.CardsStudied.Add(CurrentCard);
+            _remainingCards.Remove(CurrentCard);
+            
+            ShowNextCard();
         }
 
-        // Кнопка "Знаю" - засчитываем карту и идём дальше
         [RelayCommand]
-        public async Task KnowCard()
-        {
-            if (currentCard == null)
-                return;
-
-            _sessionStats.CardsStudied.Add(currentCard);
-            currentCard.TimesShown++;
-            currentCard.TimesCorrect++;
-
-            await MoveToNextCard();
-        }
-
-        // Встряска устройства — считаем "не знаю" и идём дальше
         public async Task OnShakeDetected()
         {
-            await DontKnowCard();
-        }
+            if (CurrentCard == null || !IsAnswerShown) return;
 
-        // Логика для "не знаю"
-        private async Task DontKnowCard()
-        {
-            if (currentCard == null)
-                return;
+            CurrentCard.TimesShown++;
+            await _cardService.UpdateCardAsync(CurrentCard);
 
-            _sessionStats.CardsStudied.Add(currentCard);
-            _sessionStats.DifficultCards.Add(currentCard);
-            currentCard.TimesShown++;
-
-            await MoveToNextCard();
-        }
-
-        // Переход к следующей карте или завершение сессии
-        private async Task MoveToNextCard()
-        {
-            _currentIndex++;
-
-            if (_currentIndex < _cards.Count)
-            {
-                SetCurrentCard(_cards[_currentIndex]);
-            }
-            else
-            {
-                displayedText = "Все карты изучены!";
-                isAnswerShown = false;
-                currentCard = null;
-                progressText = string.Empty;
-
-                await StopSession();
-            }
-        }
-
-        private void UpdateProgressText()
-        {
-            progressText = $"Карта {_currentIndex + 1} из {_cards.Count}";
+            _sessionStats.CardsStudied.Add(CurrentCard);
+            _sessionStats.DifficultCards.Add(CurrentCard);
+            
+            ShowNextCard();
         }
 
         [RelayCommand]
         private async Task StopSession()
         {
             _sessionStats.EndTime = DateTime.Now;
-
+            
+            // Navigate to summary page with session stats
             var navigationParameter = new Dictionary<string, object>
             {
-                { "SessionStats", _sessionStats },
-                { "Cards", _cards }
+                { "SessionStats", _sessionStats }
             };
-
-            await Shell.Current.GoToAsync($"///{nameof(SessionSummaryPage)}", navigationParameter);
+            
+            await Shell.Current.GoToAsync("///SessionSummaryPage", navigationParameter);
         }
-    }
 
-    public class SessionStats
-    {
-        public DateTime StartTime { get; set; } = DateTime.Now;
-        public DateTime EndTime { get; set; }
-        public List<FlashCard> CardsStudied { get; set; } = new();
-        public List<FlashCard> DifficultCards { get; set; } = new();
+        private async void EndSession()
+        {
+            await StopSession();
+        }
     }
 }

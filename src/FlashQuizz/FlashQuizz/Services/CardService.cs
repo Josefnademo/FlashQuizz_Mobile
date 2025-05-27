@@ -42,6 +42,21 @@ namespace FlashQuizz.Services
         }
 
         /// <summary>
+        /// Updates an existing flash card in the database asynchronously.
+        /// </summary>
+        public async Task UpdateCardAsync(FlashCard card)
+        {
+            var trackedEntity = _dbContext.FlashCards.Local.FirstOrDefault(e => e.Id == card.Id);
+            if (trackedEntity != null)
+            {
+                _dbContext.Entry(trackedEntity).State = EntityState.Detached;
+            }
+
+            _dbContext.FlashCards.Update(card);
+            await _dbContext.SaveChangesAsync();
+        }
+
+        /// <summary>
         /// Updates an existing flash card in the database.
         /// </summary>
         public void UpdateCard(FlashCard card)

@@ -1,8 +1,8 @@
 ﻿using Microsoft.Maui.Devices.Sensors;
 using FlashQuizz.ViewModels;
+using FlashQuizz.Services;
 using System.Text.Json;
 using FlashQuizz.Models;
-
 
 namespace FlashQuizz.Views
 {
@@ -13,7 +13,8 @@ namespace FlashQuizz.Views
         public LearningPage()
         {
             InitializeComponent();
-            _viewModel = new LearningViewModel();
+            var cardService = App.Current.Handler.MauiContext.Services.GetService<CardService>();
+            _viewModel = new LearningViewModel(cardService);
             BindingContext = _viewModel;
 
             Accelerometer.ShakeDetected += Accelerometer_ShakeDetected;

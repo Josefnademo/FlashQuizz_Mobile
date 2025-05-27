@@ -2,32 +2,43 @@
 using System.Windows.Input;
 using Microsoft.Maui.Controls;
 using System;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using FlashQuizz.Models;
 
 namespace FlashQuizz.ViewModels
 {
-    public class SessionSummaryViewModel : INotifyPropertyChanged
+    public partial class SessionSummaryViewModel : ObservableObject, IQueryAttributable
     {
-        public int TotalItems { get; }
-        public int ItemsCompleted { get; }
-        public TimeSpan SessionDuration { get; }
+        [ObservableProperty]
+        private string timeSpent;
 
-        public string SummaryText => $"Vous avez appris {ItemsCompleted} sur {TotalItems} items.";
-        public string DurationText => $"Durée de la session : {SessionDuration.Minutes} min {SessionDuration.Seconds} s";
+        [ObservableProperty]
+        private string hardestCard;
 
-        public ICommand BackToHomeCommand { get; }
+        [ObservableProperty]
+        private string perfectCardsCount;
 
-        public SessionSummaryViewModel(int totalItems, int itemsCompleted, TimeSpan sessionDuration)
+        [ObservableProperty]
+        private double memorizationPercentage;
+
+        public void ApplyQueryAttributes(IDictionary<string, object> query)
         {
-            TotalItems = totalItems;
-            ItemsCompleted = itemsCompleted;
-            SessionDuration = sessionDuration;
-
-            BackToHomeCommand = new Command(async () =>
+            if (query.TryGetValue("SessionStats", out var statsObj) && statsObj is SessionStats stats)
             {
-                await Application.Current.MainPage.Navigation.PopToRootAsync();
-            });
+                TimeSpent = stats.TimeSpent;
+                HardestCard = stats.HardestCard != null 
+                    ? $"{stats.HardestCard.Question} -> {stats.HardestCard.Answer}"
+                    : "Aucune carte difficile";
+                PerfectCardsCount = $"{stats.PerfectCardsCount} cartes";
+                MemorizationPercentage = Math.Round(stats.MemorizationPercentage, 1);
+            }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        [RelayCommand]
+        private async Task ReturnToMenu()
+        {
+            await Shell.Current.GoToAsync("///MainPage");
+        }
     }
 }

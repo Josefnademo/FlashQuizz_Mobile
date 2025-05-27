@@ -26,6 +26,11 @@
             Adds a new flash card to the database.
             </summary>
         </member>
+        <member name="M:FlashQuizz.Services.CardService.UpdateCardAsync(FlashQuizz.Models.FlashCard)">
+            <summary>
+            Updates an existing flash card in the database asynchronously.
+            </summary>
+        </member>
         <member name="M:FlashQuizz.Services.CardService.UpdateCard(FlashQuizz.Models.FlashCard)">
             <summary>
             Updates an existing flash card in the database.
@@ -87,6 +92,7 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:FlashQuizz.ViewModels.LearningViewModel.CurrentCard">
             <inheritdoc cref="F:FlashQuizz.ViewModels.LearningViewModel.currentCard"/>
@@ -104,13 +110,19 @@
             <summary>The backing field for <see cref="P:FlashQuizz.ViewModels.LearningViewModel.ShowAnswerCommand"/>.</summary>
         </member>
         <member name="P:FlashQuizz.ViewModels.LearningViewModel.ShowAnswerCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FlashQuizz.ViewModels.LearningViewModel.ShowAnswer"/>.</summary>
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:FlashQuizz.ViewModels.LearningViewModel.ShowAnswer"/>.</summary>
         </member>
         <member name="F:FlashQuizz.ViewModels.LearningViewModel.knowCardCommand">
             <summary>The backing field for <see cref="P:FlashQuizz.ViewModels.LearningViewModel.KnowCardCommand"/>.</summary>
         </member>
         <member name="P:FlashQuizz.ViewModels.LearningViewModel.KnowCardCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FlashQuizz.ViewModels.LearningViewModel.KnowCard"/>.</summary>
+        </member>
+        <member name="F:FlashQuizz.ViewModels.LearningViewModel.shakeDetectedCommand">
+            <summary>The backing field for <see cref="P:FlashQuizz.ViewModels.LearningViewModel.ShakeDetectedCommand"/>.</summary>
+        </member>
+        <member name="P:FlashQuizz.ViewModels.LearningViewModel.ShakeDetectedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FlashQuizz.ViewModels.LearningViewModel.OnShakeDetected"/>.</summary>
         </member>
         <member name="F:FlashQuizz.ViewModels.LearningViewModel.stopSessionCommand">
             <summary>The backing field for <see cref="P:FlashQuizz.ViewModels.LearningViewModel.StopSessionCommand"/>.</summary>
@@ -233,6 +245,28 @@
             Message for notifying that the card list has changed.
             </summary>
         </member>
+        <member name="T:FlashQuizz.ViewModels.SessionSummaryViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:FlashQuizz.ViewModels.SessionSummaryViewModel.TimeSpent">
+            <inheritdoc cref="F:FlashQuizz.ViewModels.SessionSummaryViewModel.timeSpent"/>
+        </member>
+        <member name="P:FlashQuizz.ViewModels.SessionSummaryViewModel.HardestCard">
+            <inheritdoc cref="F:FlashQuizz.ViewModels.SessionSummaryViewModel.hardestCard"/>
+        </member>
+        <member name="P:FlashQuizz.ViewModels.SessionSummaryViewModel.PerfectCardsCount">
+            <inheritdoc cref="F:FlashQuizz.ViewModels.SessionSummaryViewModel.perfectCardsCount"/>
+        </member>
+        <member name="P:FlashQuizz.ViewModels.SessionSummaryViewModel.MemorizationPercentage">
+            <inheritdoc cref="F:FlashQuizz.ViewModels.SessionSummaryViewModel.memorizationPercentage"/>
+        </member>
+        <member name="F:FlashQuizz.ViewModels.SessionSummaryViewModel.returnToMenuCommand">
+            <summary>The backing field for <see cref="P:FlashQuizz.ViewModels.SessionSummaryViewModel.ReturnToMenuCommand"/>.</summary>
+        </member>
+        <member name="P:FlashQuizz.ViewModels.SessionSummaryViewModel.ReturnToMenuCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FlashQuizz.ViewModels.SessionSummaryViewModel.ReturnToMenu"/>.</summary>
+        </member>
         <member name="M:FlashQuizz.Views.AddCardPage.OnAppearing">
             <summary>
             Called when the page appears.
@@ -305,6 +339,18 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedCard">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedCard" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TimeSpent">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TimeSpent" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.HardestCard">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "HardestCard" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PerfectCardsCount">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PerfectCardsCount" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MemorizationPercentage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MemorizationPercentage" generated properties.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
@@ -328,6 +374,18 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedCard">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedCard" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TimeSpent">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TimeSpent" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.HardestCard">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "HardestCard" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PerfectCardsCount">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PerfectCardsCount" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MemorizationPercentage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MemorizationPercentage" generated properties.</summary>
         </member>
     </members>
 </doc>
