@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using FlashQuizz.Models;
 using FlashQuizz.Services;
+using FlashQuizz.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -21,9 +22,6 @@ namespace FlashQuizz.ViewModels
 
         [ObservableProperty]
         private FlashCard currentCard;
-
-        [ObservableProperty]
-        private string displayedText;
 
         [ObservableProperty]
         private bool isAnswerShown;
@@ -56,7 +54,6 @@ namespace FlashQuizz.ViewModels
 
             int index = _random.Next(_remainingCards.Count);
             CurrentCard = _remainingCards[index];
-            DisplayedText = CurrentCard.Question;
             IsAnswerShown = false;
             UpdateProgress();
         }
@@ -70,13 +67,18 @@ namespace FlashQuizz.ViewModels
         }
 
         [RelayCommand]
-        private void ShowAnswer()
+        private async Task ShowAnswer()
         {
-            if (CurrentCard != null)
-            {
-                DisplayedText = CurrentCard.Answer;
-                IsAnswerShown = true;
-            }
+            if (CurrentCard == null) return;
+
+            IsAnswerShown = true;
+            
+            // When showing the answer, count it as "don't know"
+            CurrentCard.TimesShown++;
+            await _cardService.UpdateCardAsync(CurrentCard);
+
+            _sessionStats.CardsStudied.Add(CurrentCard);
+            _sessionStats.DifficultCards.Add(CurrentCard);
         }
 
         [RelayCommand]
@@ -84,13 +86,15 @@ namespace FlashQuizz.ViewModels
         {
             if (CurrentCard == null) return;
 
-            CurrentCard.TimesShown++;
+            // Since we already counted this as "don't know" when showing the answer,
+            // we need to update the stats to reflect that the user actually knew it
             CurrentCard.TimesCorrect++;
             await _cardService.UpdateCardAsync(CurrentCard);
 
-            _sessionStats.CardsStudied.Add(CurrentCard);
-            _remainingCards.Remove(CurrentCard);
+            // Remove from difficult cards since the user actually knew it
+            _sessionStats.DifficultCards.RemoveAll(c => c.Id == CurrentCard.Id);
             
+            _remainingCards.Remove(CurrentCard);
             ShowNextCard();
         }
 
@@ -98,13 +102,10 @@ namespace FlashQuizz.ViewModels
         public async Task OnShakeDetected()
         {
             if (CurrentCard == null || !IsAnswerShown) return;
-
-            CurrentCard.TimesShown++;
-            await _cardService.UpdateCardAsync(CurrentCard);
-
-            _sessionStats.CardsStudied.Add(CurrentCard);
-            _sessionStats.DifficultCards.Add(CurrentCard);
             
+            // The card was already counted as "don't know" when showing the answer,
+            // so we just need to move to the next card
+            _remainingCards.Remove(CurrentCard);
             ShowNextCard();
         }
 
@@ -119,7 +120,7 @@ namespace FlashQuizz.ViewModels
                 { "SessionStats", _sessionStats }
             };
             
-            await Shell.Current.GoToAsync("///SessionSummaryPage", navigationParameter);
+            await Shell.Current.GoToAsync(nameof(SessionSummaryPage), navigationParameter);
         }
 
         private async void EndSession()

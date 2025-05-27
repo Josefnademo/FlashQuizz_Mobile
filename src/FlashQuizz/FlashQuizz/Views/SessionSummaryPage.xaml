@@ -5,85 +5,103 @@
              xmlns:components="clr-namespace:FlashQuizz.Views.Components"
              xmlns:views="clr-namespace:FlashQuizz.Views"
              xmlns:viewmodel="clr-namespace:FlashQuizz.ViewModels"
-             Title="Résumé"
-             BackgroundColor="{DynamicResource PageBackgroundColor}">
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#121212">
 
+    <Grid RowDefinitions="Auto, *, Auto">
+        <!-- Victory Image -->
+        <Image Grid.Row="0"
+             Source ="result_logo.png"
+               HeightRequest="100"
+               WidthRequest="400"
+               Margin="10,0"
+               Aspect="AspectFit"
+               BackgroundColor="Transparent"
+               HorizontalOptions="Start"
+               VerticalOptions="Start"/>
 
+        <!-- Main Content -->
+        <Frame Grid.Row="1"
+               BackgroundColor="#CCC5EB"
+               CornerRadius="25"
+               HasShadow="True"
+               BorderColor="Transparent"
+               Margin="20,20,20,20">
+            
+            <StackLayout Spacing="25">
+                <!-- Title -->
+                <Label Text="🎉 Session&#x0a;d'apprentissage terminée !"
+                       FontSize="26"
+                       FontAttributes="Bold"
+                       TextColor="#121212"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"/>
 
-    <ScrollView>
-        <StackLayout Padding="20" Spacing="25" BackgroundColor="#121212">
-            <Label Text="Session terminée!" 
-                   FontSize="28"
-                   FontAttributes="Bold"
-                   TextColor="{DynamicResource PrimaryTextColor}"
-                   HorizontalOptions="Center"/>
+                <!-- Stats -->
+                <StackLayout Spacing="25">
+                    <!-- Time -->
+                    <StackLayout Spacing="5">
+                        <Label Text="⏱ Temps passé" 
+                               FontSize="16"
+                               TextColor="#666666"/>
+                        <Label Text="{Binding TimeSpent}" 
+                               FontSize="24"
+                               FontAttributes="Bold"
+                               TextColor="#121212"/>
+                    </StackLayout>
 
-            <!-- Stats Cards -->
-            <Frame BackgroundColor="{DynamicResource CardBackgroundColor}"
-                   BorderColor="{DynamicResource CardBorderColor}"
-                   Padding="15">
-                <StackLayout Spacing="10">
-                    <Label Text="Temps passé:" 
-                           FontSize="16"
-                           TextColor="{DynamicResource SecondaryTextColor}"/>
-                    <Label Text="{Binding TimeSpent}" 
-                           FontSize="20"
-                           FontAttributes="Bold"
-                           TextColor="{DynamicResource PrimaryTextColor}"/>
+                    <!-- Hardest Card -->
+                    <StackLayout Spacing="5">
+                        <Label Text="💪 Carte la plus difficile" 
+                               FontSize="16"
+                               TextColor="#666666"/>
+                        <Label Text="{Binding HardestCard}" 
+                               FontSize="24"
+                               FontAttributes="Bold"
+                               TextColor="#121212"/>
+                    </StackLayout>
+
+                    <!-- Mastered Cards -->
+                    <StackLayout Spacing="5">
+                        <Label Text="🏆 Cartes maîtrisées" 
+                               FontSize="16"
+                               TextColor="#666666"/>
+                        <Label Text="{Binding PerfectCardsCount}" 
+                               FontSize="24"
+                               FontAttributes="Bold"
+                               TextColor="#121212"/>
+                    </StackLayout>
+
+                    <!-- Memorization Rate -->
+                    <StackLayout Spacing="5">
+                        <Label Text="🚀 Taux de mémorisation" 
+                               FontSize="16"
+                               TextColor="#666666"/>
+                        <Label Text="{Binding MemorizationPercentage, StringFormat='{0}%'}" 
+                               FontSize="24"
+                               FontAttributes="Bold"
+                               TextColor="#121212"/>
+                    </StackLayout>
                 </StackLayout>
-            </Frame>
+            </StackLayout>
+        </Frame>
 
-            <Frame BackgroundColor="{DynamicResource CardBackgroundColor}"
-                   BorderColor="{DynamicResource CardBorderColor}"
-                   Padding="15">
-                <StackLayout Spacing="10">
-                    <Label Text="Carte la plus difficile:" 
-                           FontSize="16"
-                           TextColor="{DynamicResource SecondaryTextColor}"/>
-                    <Label Text="{Binding HardestCard}" 
-                           FontSize="20"
-                           FontAttributes="Bold"
-                           TextColor="{DynamicResource PrimaryTextColor}"/>
-                </StackLayout>
-            </Frame>
-
-            <Frame BackgroundColor="{DynamicResource CardBackgroundColor}"
-                   BorderColor="{DynamicResource CardBorderColor}"
-                   Padding="15">
-                <StackLayout Spacing="10">
-                    <Label Text="Cartes maîtrisées:" 
-                           FontSize="16"
-                           TextColor="{DynamicResource SecondaryTextColor}"/>
-                    <Label Text="{Binding PerfectCardsCount}" 
-                           FontSize="20"
-                           FontAttributes="Bold"
-                           TextColor="{DynamicResource PrimaryTextColor}"/>
-                </StackLayout>
-            </Frame>
-
-            <Frame BackgroundColor="{DynamicResource CardBackgroundColor}"
-                   BorderColor="{DynamicResource CardBorderColor}"
-                   Padding="15">
-                <StackLayout Spacing="10">
-                    <Label Text="Taux de mémorisation:" 
-                           FontSize="16"
-                           TextColor="{DynamicResource SecondaryTextColor}"/>
-                    <Label Text="{Binding MemorizationPercentage, StringFormat='{0}%'}" 
-                           FontSize="20"
-                           FontAttributes="Bold"
-                           TextColor="{DynamicResource PrimaryTextColor}"/>
-                </StackLayout>
-            </Frame>
-
-            <!-- Action Button -->
+        <!-- Bottom Buttons -->
+        <StackLayout Grid.Row="2" 
+                     Spacing="10" 
+                     Margin="20,0,20,20">
             <Button Text="Retour au menu principal" 
-                   Command="{Binding ReturnToMenuCommand}"
-                   Style="{DynamicResource PrimaryButtonStyle}"/>
-            <!-- button Home-->
+                    Command="{Binding ReturnToMenuCommand}"
+                    BackgroundColor="#FF91AF"
+                    TextColor="White"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    CornerRadius="25"
+                    HeightRequest="50"/>
+
             <components:GoHomeButton 
-HorizontalOptions="End" 
-VerticalOptions="End" 
-Margin="-10"/>
+                HorizontalOptions="End" 
+                Margin="-17,0"/>
         </StackLayout>
-    </ScrollView>
+    </Grid>
 </ContentPage>

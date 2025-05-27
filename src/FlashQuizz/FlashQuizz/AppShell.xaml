@@ -6,6 +6,7 @@
     xmlns:views="clr-namespace:FlashQuizz.Views"
     xmlns:ViewModels="clr-namespace:FlashQuizz.ViewModels"
     xmlns:local="clr-namespace:FlashQuizz.Views"
+    Shell.NavBarIsVisible="False"
     Shell.FlyoutBehavior="Disabled"
     Title="FlashQuizz">
 

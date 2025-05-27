@@ -97,9 +97,6 @@
         <member name="P:FlashQuizz.ViewModels.LearningViewModel.CurrentCard">
             <inheritdoc cref="F:FlashQuizz.ViewModels.LearningViewModel.currentCard"/>
         </member>
-        <member name="P:FlashQuizz.ViewModels.LearningViewModel.DisplayedText">
-            <inheritdoc cref="F:FlashQuizz.ViewModels.LearningViewModel.displayedText"/>
-        </member>
         <member name="P:FlashQuizz.ViewModels.LearningViewModel.IsAnswerShown">
             <inheritdoc cref="F:FlashQuizz.ViewModels.LearningViewModel.isAnswerShown"/>
         </member>
@@ -110,7 +107,7 @@
             <summary>The backing field for <see cref="P:FlashQuizz.ViewModels.LearningViewModel.ShowAnswerCommand"/>.</summary>
         </member>
         <member name="P:FlashQuizz.ViewModels.LearningViewModel.ShowAnswerCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:FlashQuizz.ViewModels.LearningViewModel.ShowAnswer"/>.</summary>
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FlashQuizz.ViewModels.LearningViewModel.ShowAnswer"/>.</summary>
         </member>
         <member name="F:FlashQuizz.ViewModels.LearningViewModel.knowCardCommand">
             <summary>The backing field for <see cref="P:FlashQuizz.ViewModels.LearningViewModel.KnowCardCommand"/>.</summary>
@@ -327,9 +324,6 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentCard">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentCard" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DisplayedText">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DisplayedText" generated properties.</summary>
-        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsAnswerShown">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsAnswerShown" generated properties.</summary>
         </member>
@@ -362,9 +356,6 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentCard">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentCard" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DisplayedText">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DisplayedText" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsAnswerShown">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsAnswerShown" generated properties.</summary>

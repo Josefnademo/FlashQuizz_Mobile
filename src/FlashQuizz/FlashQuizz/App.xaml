@@ -4,6 +4,7 @@
              xmlns:views="clr-namespace:FlashQuizz.Views"
              xmlns:ViewModels="clr-namespace:FlashQuizz.ViewModels"
              xmlns:local="clr-namespace:FlashQuizz"
+             xmlns:converters="clr-namespace:FlashQuizz.Converters"
              x:Class="FlashQuizz.App">
     <Application.Resources>
         <ResourceDictionary>
@@ -11,6 +12,10 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <!-- Converters -->
+            <converters:InverseBoolConverter x:Key="InverseBoolConverter" />
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
